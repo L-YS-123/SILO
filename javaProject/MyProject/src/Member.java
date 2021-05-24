@@ -23,5 +23,5 @@ public class Member {
 		System.out.println(calc.multiply(4, 7));
 		System.out.println(calc.divide(4, 7));
 	}
-
+  
 }
