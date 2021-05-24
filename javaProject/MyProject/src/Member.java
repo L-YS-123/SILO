@@ -9,6 +9,8 @@ public class Member {
 		System.out.println(name);
 		System.out.println(age);
 		System.out.println(height);
-		System.out.println(hasBook);				
+		System.out.println(hasBook);		
+		
+		System.out.printf("%s, %d, %f, %b ", name, age, height, hasBook);
 	}  
 }
