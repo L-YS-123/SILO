@@ -1,7 +1,14 @@
 public class Member {
-	public static void main(String[] args) {
-		System.out.println("이윤성");		
-		//인스턴스 생성 = 클래스의 변수,메소드를 메모리에 적재함
-		//참조타입 참조변수 = new 
+	public static void main(String[] args) {			
+		
+		String name="이윤성";
+		int age=26;
+		double height=170.0;
+		boolean hasBook=true;
+		
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(height);
+		System.out.println(hasBook);				
 	}  
 }
