@@ -18,7 +18,10 @@ public class Calculator {
 	//인스턴스 생성 -> 클래스의 정의가 필요 (필요한 변수, 필요한 메소드)
 	//클래스이름 참조변수 = new 클래스이름();
 		Calculator cal = new Calculator();
-		cal.divide(8, 4);
+		cal.divide(8, 3);
+		cal.plus(3, 6);
+		cal.minus(18, 5);
+		cal.multiply(29, 13);
 		
 	}
 	
