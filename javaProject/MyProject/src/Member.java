@@ -1,27 +1,7 @@
-class Calculator {
-	int add(int a, int b) {
-		return a+b;
-	}
-	int substract(int a, int b) {
-		return a-b;
-	}
-	int multiply(int a, int b) {
-		return a*b;
-	}
-	int divide(int a, int b) {
-		return a/b;
-	}
-}
 public class Member {
-
 	public static void main(String[] args) {
-		System.out.println("이윤성");	
-		
-		Calculator calc = new Calculator();
-		System.out.println(calc.add(4, 7));
-		System.out.println(calc.substract(4, 7));
-		System.out.println(calc.multiply(4, 7));
-		System.out.println(calc.divide(4, 7));
-	}
-  
+		System.out.println("이윤성");		
+		//인스턴스 생성 = 클래스의 변수,메소드를 메모리에 적재함
+		//참조타입 참조변수 = new 
+	}  
 }
