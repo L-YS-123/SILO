@@ -3,7 +3,7 @@ public class Member {
 		
 		String name="이윤성";
 		int age=26;
-		double height=170.0;
+		double height=170.0d;
 		boolean hasBook=true;
 		
 		System.out.println(name);
