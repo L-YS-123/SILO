@@ -1,5 +1,5 @@
 public class Person {
-	String name = "¿Ã¿±º∫";
+	String name = "Ïù¥Ïú§ÏÑ±";
 	String phoneNum = "000-0000-0000";
-	String regiNum = "000000-0000000";
+	String regiNum = "000000-0000000"; 
 }
