@@ -1,4 +1,3 @@
-package Ch4;
 import java.util.Scanner;
 
 public class Member {
@@ -14,10 +13,10 @@ public class Member {
 		}
 
 		if ((2021 - year) > 19) {
-			if ((2021 - year) % 2 == 0) {
-				System.out.println("검사 대상입니다.");
-			} else {
+			if ((2021 - year) % 2 != 0) {
 				System.out.println("검사 대상이 아닙니다.");
+			} else {
+				System.out.println("검사 대상입니다.");
 				if ((2021 - year) > 39) {
 					System.out.println("무료 암 검사 대상입니다.");
 				}
@@ -26,6 +25,7 @@ public class Member {
 	}
 
 	public static void main(String[] args) {
-		testMethod();
+		testMethod(); 
 	}
 }
+
