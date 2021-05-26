@@ -20,7 +20,7 @@ public class Member {
 			String eMail, String birthday, String adress) {
 		this.name = name; this.phoneNum = phoneNum; this.major=major; this.grade=grade;
 		this.eMail=eMail; this.birthday=birthday; this.adress=adress;
-		//this(name, phoneNum, major, grade, eMail, birthday, adress);
+		//this(name, phoneNum, major, grade, eMail, birthday, adress); -> 맨 처음엔 일일이 적어서 초기화를 해주어야 그 다음에 묶을 수 있음
 	}
 	
 	
