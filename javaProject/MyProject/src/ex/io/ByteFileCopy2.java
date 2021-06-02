@@ -11,9 +11,9 @@ public class ByteFileCopy2 {
 
 			// 1.파일을 바이너리 데이터로 읽어올 스트림 생성 : FileInputStream
 			// FileInputStream fileInputStream = new FileInputStream("orginal.pdf");
-			InputStream fileInputStream = new FileInputStream("orginal.pdf");
+			InputStream in = new FileInputStream("orginal.pdf");
 			// 2.파일을 쓰기위한 스트림 생성 : FileOutputStream
-			FileOutputStream fileOutputStream = new FileOutputStream("copy.pdf");
+			FileOutputStream out = new FileOutputStream("copy.pdf");
 
 			// 카피한 데이터의 크기
 			int copyByte = 0;
@@ -23,7 +23,7 @@ public class ByteFileCopy2 {
 			int readLen = 0;
 
 			while (true) {
-				readLen = System.in.read(buf); // 완료시점에 -1 반환
+				readLen = in.read(buf); // 완료시점에 -1 반환
 
 				// 탈출의 조건 : 파일의 모든 데이터를 읽은 경우
 				if (readLen == -1) {
@@ -36,8 +36,8 @@ public class ByteFileCopy2 {
 			}
 
 			// 스트림 닫기
-			System.in.close();
-			System.out.close();
+			in.close();
+			out.close();
 
 			System.out.println("복사완료! 복사된 바이트 사이즈는 : " + copyByte + "byte");
 
