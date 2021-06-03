@@ -34,9 +34,9 @@ public class CollectionFrameWork {
 		fp.add(1, new FootballPlayer("박지성", 13, "맨유", 37));
 		fp.add(2, new FootballPlayer("안정환", 23, "부산 아이파크", 47));
 		fp.add(3, new FootballPlayer("아길라르", 33, "인천 유나이티드", 17));
-
+		
 		for(int i=0; i<fp.size(); i++) {
-			System.out.println(fp.toString());
+			System.out.println(fp.get(i));
 		}
 	}
 
