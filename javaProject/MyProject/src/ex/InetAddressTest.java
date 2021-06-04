@@ -1,0 +1,23 @@
+package ex;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class InetAddressTest {
+
+	public static void main(String[] args) {
+
+		String urlStr = "www.bitcamp.co.kr";
+		
+		try {
+			InetAddress ip = InetAddress.getByName(urlStr);
+			
+			System.out.println("호스트 이름: " + ip.getHostName());
+			System.out.println("IP address : " + ip.getHostAddress());
+		} catch (UnknownHostException e) {
+			// 등록되지 않은 도메인 들, 서버문제, 잘못된 정보 등등..
+			e.printStackTrace();
+		}
+	}
+
+}
