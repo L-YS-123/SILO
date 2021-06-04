@@ -1,6 +1,8 @@
+// 나이가 같으면 무조건 중복처리 되는 상황 --> if 조건식에 ;가 붙어서 잘못된 결과가 나왔음
 package Ch14;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 class FootballPlayer2 {
@@ -17,19 +19,20 @@ class FootballPlayer2 {
 		this.age2 = age2;
 	}
 
-	
 	public boolean equals(Object obj) {
 		if (obj != null && obj instanceof FootballPlayer2) {
 			FootballPlayer2 footballPlayer2 = (FootballPlayer2) obj;
-			if(this.name2.equals(footballPlayer2.name2) && this.team2.equals(footballPlayer2.team2) && this.age2 == footballPlayer2.age2); {
+			if (this.name2.equals(footballPlayer2.name2) && this.team2.equals(footballPlayer2.team2)
+					&& (this.age2 == footballPlayer2.age2))
+			{
 				return true;
 			}
 		}
 		return false;
 	}
-	
-	public int hashCode() {
-		return age2%10;
+
+	public int hashCode() { // ??
+		return age2 % 10;
 	}
 
 	@Override
@@ -40,8 +43,8 @@ class FootballPlayer2 {
 }
 
 /*
- * 2.축구선수의 인스턴스가 팀과 이름 그리고 나이가 같으면 같은 선수라 판단하고 입력이 되지 않도록 Set<E> 컬렉션을 이용해서 축구선수
- * 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
+ * 2.축구선수의 인스턴스가 '팀'과 '이름' 그리고 '나이'가 같으면 같은 선수라 판단하고 입력이 되지 않도록 Set<E> 컬렉션을 이용해서
+ * 축구선수 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
  */
 public class CollectionFrameWork2 {
 
@@ -49,12 +52,14 @@ public class CollectionFrameWork2 {
 
 		HashSet<FootballPlayer2> fp2 = new HashSet<>();
 		fp2.add(new FootballPlayer2("이천수", 10, "레알 소시에다드", 20));
+		fp2.add(new FootballPlayer2("이천수", 9, "레알 소시에다드", 20)); // (이름 , 팀, 나이) 중복
 		fp2.add(new FootballPlayer2("이수", 10, "레알 소시에다드", 20));
-		fp2.add(new FootballPlayer2("손흥민", 10, "레알 소시에다드", 20));
+		fp2.add(new FootballPlayer2("손흥민", 10, "레알 마드리드", 20));
 
-//		for (int i = 0; i < fp2.size(); i++) {
-		System.out.println(fp2.toString());
-//		}
+		Iterator<FootballPlayer2> itr = fp2.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 	}
 
 }
