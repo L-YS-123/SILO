@@ -4,15 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 class FootballPlayer {
-	String name;
-	int number;
-	String team;
-	int age;
+	private String name;
+	private int number;
+	private String team;
+	private int age;
 
 	public FootballPlayer(String name, int number, String team, int age) {
 		this.name = name;
 		this.number = number;
 		this.team = team;
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -34,8 +66,8 @@ public class CollectionFrameWork {
 		fp.add(1, new FootballPlayer("박지성", 13, "맨유", 37));
 		fp.add(2, new FootballPlayer("안정환", 23, "부산 아이파크", 47));
 		fp.add(3, new FootballPlayer("아길라르", 33, "인천 유나이티드", 17));
-		
-		for(int i=0; i<fp.size(); i++) {
+
+		for (int i = 0; i < fp.size(); i++) {
 			System.out.println(fp.get(i));
 		}
 	}
