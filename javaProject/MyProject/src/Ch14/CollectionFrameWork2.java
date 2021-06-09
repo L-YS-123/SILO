@@ -55,7 +55,7 @@ public class CollectionFrameWork2 {
 		fp2.add(new FootballPlayer2("이천수", 9, "레알 소시에다드", 20)); // (이름 , 팀, 나이) 중복
 		fp2.add(new FootballPlayer2("이수", 10, "레알 소시에다드", 20));
 		fp2.add(new FootballPlayer2("손흥민", 10, "레알 마드리드", 20));
-
+	
 		Iterator<FootballPlayer2> itr = fp2.iterator();
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
