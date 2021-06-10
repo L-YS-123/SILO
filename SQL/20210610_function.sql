@@ -11,19 +11,19 @@ from dual;
 select floor(15.7) -- 소수점 이하 절삭
 from dual;
 
-select ROUND(15.193,1), ROUND(15.193,-1) -- 마이너스는, 반올림 기준점을 숫자만큼 정수방향으로 이동
+select ROUND(15.193, -1), ROUND(15.193, 2) -- 오른쪽 숫자는 해당 소수점 자리수를 기준으로 반올림 함을 의미
 from dual;
 
-select TRUNC(15.79,1) -- 소수점 둘째자리 절삭
+select TRUNC(15.79, 1) -- 기준점에서 절삭
 from dual;
 
-select MOD(11,4) -- 왼쪽을 오른쪽숫자로 나눈 '나머지 값'
+select MOD(11, 4) -- 왼쪽을 오른쪽숫자로 나눈 '나머지 값'
 from dual;
 
 -- 직원번호가 홀수인 사원
 select empno, ename
 from emp
-where mod(empno,2) = 1;
+where mod(empno, 2) = 1;
 
 -- 문자 함수
 -- concat(문자, 문자) == '문자'||'문자'
