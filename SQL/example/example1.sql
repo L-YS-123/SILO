@@ -89,7 +89,7 @@ where ename like '%E%' and ename like '%A%';
 --사원의 이름, 담당업무, 급여를 출력하시오.
 select ename, job, sal
 from emp
-where (job='CLERK' or job='SALESMAN') and sal in (1600,950,1300); 
+where (job='CLERK' or job='SALESMAN') and sal not in (1600,950,1300); 
 
 
 --15. 커미션이 $500 이상인 사원의 이름과 급여 및 커미션을 출력하시오.
