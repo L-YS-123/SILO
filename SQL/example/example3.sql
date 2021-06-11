@@ -42,7 +42,7 @@ select job ,count(*)
 from emp
 group by job;
 
---26. 관리자 수를 출력하시오.
+--26. 관리자 수를 출력하시오. *distinct가 핵심: 중복 제거
 select count(distinct mgr)
 from emp;
 
