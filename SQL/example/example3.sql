@@ -55,10 +55,7 @@ select max(sal)-min(sal)
 from emp;
 
 --28. 직급별 사원의 최저 급여를 출력하시오. 관리자를 알 수 없는 사원과 최저 급여가 2000 미만인 그룹은 제외시키고 결과를 급여에 대한 내림차순으로 정렬하여 출력하시오.
-select job, min(sal)
-from emp
-group by job
-having (min(sal) > 2000) and job is not null;  -- 오로지 칼럼명만 올 수 있다(칼럼의 종류x)
+
 
 --29. 각 부서에 대해 부서번호, 사원 수, 부서 내의 모든 사원의 평균 급여를 출력하시오. 평균 급여는 소수점 둘째 자리로 반올림 하시오.
 select deptno, count(*), round(avg(sal), 2)
