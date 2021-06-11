@@ -87,3 +87,8 @@ having avg(sal) >= 2000;
 
 -- 부서급여의 최대값과 최소값을 구하되 
 -- 최대 급여가 2900이상인 부서만 출력합니다.
+select deptno, max(sal), min(sal)
+from emp
+group by deptno
+having max(sal) >= 2900
+order by deptno;
