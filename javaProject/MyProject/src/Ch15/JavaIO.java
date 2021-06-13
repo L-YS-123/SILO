@@ -2,6 +2,7 @@ package Ch15;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,10 +14,6 @@ import java.io.IOException;
 ③파일의 이름은 날짜와 메모의 제목을 이용해서 생성
 ④메모리스트와 파일 읽기 기능을 구현해봅시다. ????
 
-2.앞 Chapter에서 만들어본 축구선수 정보 파일로 저장하는 프로그램을 만들어 봅시다.
-①축구선수 정보 인스턴스를 List<E>에 저장하는 프로그램을 만들어 봅시다.
-②이 인스턴스 들을 파일로 저장하는 기능을 만들어 봅시다.
-③저장된 파일을 객체로 만드는 기능을 만들어봅시다.
  */
 public class JavaIO {
 	BufferedWriter writer = null;
@@ -41,14 +38,13 @@ public class JavaIO {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Yun\\Documents\\GitHub\\Text.txt"));
 			String Line = null;
-			while ((Line = reader.readLine()) != null ){
+			while ((Line = reader.readLine()) != null ){	// 왜 line 이라는 참조변수를 이용해야지만 제대로 된 결과가 나오는지??
 				System.out.println(Line);
 			}
-
 			reader.close();
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 }
