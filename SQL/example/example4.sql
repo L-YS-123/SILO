@@ -12,7 +12,7 @@ on e.deptno = d.deptno;
 --36. 조인과 WildCARD를 사용하여 이름에 ‘A’가 포함된 모든 사원의 이름과 부서명을 출력하시오.
 select e.ename, d.dname
 from emp e, dept d
-where e.ename like '%A%';
+where e.ename like '%A%' and e.deptno = d.deptno;
 
 --37. JOIN을 이용하여 NEW YORK에 근무하는 모든 사원의 이름, 업무, 부서번호 및 부서명을 출력하시오.
 select e.ename, e.job, e.deptno, d.dname
@@ -34,7 +34,7 @@ order by e.empno desc;
 select o.ename, o.deptno, t.ename
 from emp o inner join emp t 
 on o.deptno = t.deptno
-where o.ename = 'SCOTT';
+where o.ename = 'SCOTT' and t.ename != 'SCOTT';
 
 --41. SELF JOIN을 사용하여 WARD 사원보다 늦게 입사한 사원의 이름과 입사일을 출력하시오.
 select o.ename, o.hiredate ,t.ename, t.hiredate
