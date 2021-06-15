@@ -74,11 +74,25 @@ from orders o, customer c, book b
 where o.custid=c.custid and o.bookid=b.bookid and c.name='박지성'
 ;
 
+
 select distinct *
 from orders o, customer c, book b
 where o.custid=c.custid and o.bookid=b.bookid 
 
-and 
+and b.publisher in (select distinct b.publisher
+from orders o, customer c, book b
+where o.custid=c.custid and o.bookid=b.bookid and c.name='박지성')
+
+and c.name != '박지성';
+
+
+--(2) 두 개 이상의 서로 다른 출판사에서 도서를 구매한 고객의 이름
+select c.name
+from customer c, book b, orders o
+where c.custid = o.custid and b.bookid = o.bookid
+group by c.name
+having count(distinct b.publisher) >= 2
+;
 
 
 
