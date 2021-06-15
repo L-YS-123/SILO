@@ -19,4 +19,3 @@ idx number(6) constraint comInfo_idx primary key not null,
 fr_c_company varchar2(20) default 'n' not null,
 fr_ref number(6) constraint comInfo_fk references phoneInfo_basic(idx) not null
 );
-
