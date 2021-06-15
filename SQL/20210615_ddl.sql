@@ -102,3 +102,66 @@ rename emp01 to test
 ;
 desc emp01;
 desc test;
+
+
+
+
+
+drop table emp02;
+
+create table emp02
+as
+select empno, ename, sal, job from emp where 1=0 -- 구조만 복사
+;
+desc emp02;
+
+insert into emp02 (empno, ename, sal, job) values(null, null, 10000, 'MANAGER');  -- 순서대로 밸류괄호에 값 지정
+insert into emp02 values(null, null, 10000, 'MANAGER'); -- 모든 컬럼에 데이터를 집어넣을 때 생략가능. 순서는 생성된 컬럼 순서대로
+
+select * from emp02; --null값이 나옴
+
+
+
+
+
+
+
+
+drop table emp02;
+
+--컬럼 레벨에서 제약사항 정의
+create table emp02 (
+empno number(4)constraint emp02_empno_pk primary key,
+ename varchar2(20) constraint emp02_ename_notNull not null,
+sal number(6,2) constraint emp02_sal_check check (sal > 500 and sal < 5000),
+job varchar2(20) default '미지정',
+deptno number constraint emp02_deptno_fk REFERENCES dept(deptno) -- REFERENCES 참조테이블명 (프라이머리 키)
+);
+
+desc emp02;
+
+insert into emp02 (empno, ename, sal, job, deptno) values(null, null, 10000, 'MANAGER', 50); -- null값이 들어갈 수 없으므로 오류나는게 정상
+insert into emp02 (empno, ename, sal, job, deptno) values(1000, 'son', 10000, 'MANAGER', 50); -- (6,2) = 0000.00 값. 네자리를 벗어나서 오류
+insert into emp02 (empno, ename, sal, job, deptno) values(1000, 'son', 4999, 'MANAGER', 50); -- 
+insert into emp02 (empno, ename, sal, job ,deptno) values(1000, 'son', 4999, 'MANAGER',40); -- 성공 default값
+
+
+
+select * from emp02;
+
+
+
+
+
+-- 테이블 레벨에서 제약사항 정의
+create table emp03 (
+empno number(4),--constraint emp02_empno_pk primary key,
+ename varchar2(20) constraint emp02_ename_notNull not null, --not null제약은 컬럼 레벨에서만 정의 가능하다
+sal number(6,2) constraint emp02_sal_check check (sal > 500 and sal < 5000), 
+job varchar2(20), --default '미지정',
+deptno number, --constraint emp02_deptno_fk REFERENCES dept(deptno),
+------------------------------------------------------------------
+--제약정의
+constraint emp03_empno_pk primary key (empno), -- pk제약
+constraint emp03_deptno_fk foreign key (deptno) references dept(deptno)
+);
