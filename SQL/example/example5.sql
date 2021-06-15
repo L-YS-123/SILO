@@ -29,10 +29,10 @@ having avg(sal) = (select min(avg(sal)) from emp group by job)
 -- having 절에서 group by job을 왜 해주어야 하는지 모르겠음
 
 --47. 각 부서의 최소 급여를 받는 사원의 이름, 급여, 부서번호를 표시하시오.
-select ename, sal, deptno
-from emp
-where sal in ( select min(sal) from emp group by deptno)
-;
+select e1.ename, e1.sal, e1.deptno
+from emp e1
+where sal in ( select min(sal) from emp e2 where e1.deptno = e2.deptno group by deptno)
+; -- where e1.deptno = e2.deptno --> 중복되는 값이 있으면 잘못된 결과가 나올 수 있기 때문에 사용
 
 --48. 담당업무가 ANALYST 인 사원보다 급여가 적으면서 
 --업무가 ANALYST가 아닌 사원들을 표시(사원번호, 이름, 담당 업무, 급여)하시오.
