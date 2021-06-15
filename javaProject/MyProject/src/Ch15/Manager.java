@@ -21,7 +21,9 @@ public class Manager {
 		String input = scanner.nextLine();
 		
 		if (input == "true") {
+			
 			System.out.println("이름, 등번호, 팀, 나이를 순서대로 입력해주세요.");
+			
 			for (int i=0; i<Integer.MAX_VALUE; i++) {
 				
 				String name = scanner.nextLine();
