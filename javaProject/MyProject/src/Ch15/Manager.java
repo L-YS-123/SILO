@@ -18,24 +18,34 @@ public class Manager {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("값을 입력하려면 true를 입력하세요");
+
 		String input = scanner.nextLine();
-		
-		if (input == "true") {
-			
+
+		if (input.equals("true")) {
+
 			System.out.println("이름, 등번호, 팀, 나이를 순서대로 입력해주세요.");
-			
-			for (int i=0; i<Integer.MAX_VALUE; i++) {
+
+			for (int i = 0; i < Integer.MAX_VALUE; i++) {
+				
+//				scanner.nextInt(); // nextInt()는 개행문자(Enter 키)를 처리하지 않기 때문에 오류가 남
 				
 				String name = scanner.nextLine();
 				int number = scanner.nextInt();
+				scanner.nextLine(); // 엔터키를 처리해주기 위한 스캐너
 				String team = scanner.nextLine();
 				int age = scanner.nextInt();
+				scanner.nextLine();// 엔터키를 처리해주기 위한 스캐너
 
 				list.add(new FootballPlayer(name, number, team, age));
 				System.out.println(list.get(i));
 			}
-		} 
+		}
 
+	}
+
+	private static int parseInteger(String str) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
