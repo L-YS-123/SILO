@@ -43,9 +43,6 @@ public class Manager {
 
 	}
 
-	private static int parseInteger(String str) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 }
