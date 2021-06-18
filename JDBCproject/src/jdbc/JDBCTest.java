@@ -78,13 +78,6 @@ public class JDBCTest {
 			
 			
 			
-			
-			
-			
-			
-			
-			
-			
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 클래스를 찾지못함!!!");
 			e.printStackTrace();
@@ -125,13 +118,6 @@ public class JDBCTest {
 			}
 			
 		}
-		
-		
-		
-		
-		
-		
-		
 		
 
 	}
