@@ -22,7 +22,7 @@ public class JavaIO {
 	public static void main(String[] args) {
 
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Yun\\Documents\\GitHub\\Text.txt"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\bitcamp\\Documents\\GitHub\\Text.txt"));
 
 			writer.write("2021-06-13");
 			writer.newLine();
@@ -36,7 +36,7 @@ public class JavaIO {
 		}
 
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Yun\\Documents\\GitHub\\Text.txt"));
+			BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\bitcamp\\Documents\\GitHub\\Text.txt"));
 			String Line = null;
 			while ((Line = reader.readLine()) != null ){	// 왜 line 이라는 참조변수를 이용해야지만 제대로 된 결과가 나오는지??
 				System.out.println(Line);
