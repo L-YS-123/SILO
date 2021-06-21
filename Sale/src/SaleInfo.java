@@ -1,6 +1,4 @@
-
-
-public class SaleClass {
+public class SaleInfo {
 	private int memcode;
 	private String name;
 	private String ID;
