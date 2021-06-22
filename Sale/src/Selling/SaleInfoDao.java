@@ -12,11 +12,10 @@ public class SaleInfoDao {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 
-	SaleInfoDao() {
+	int Dao(Connection conn, SaleInfo saleinfo) {
 
 		Calculator calc = new Calculator();
-
-
+		
 		int result = 0;
 
 		try {
@@ -58,9 +57,9 @@ public class SaleInfoDao {
 //			array[2] = new SaleInfo(3,"Cafemocca",calc.cafemoccaPrice);
 			
 
-			
 			result = pstmt.executeUpdate();
 			System.out.println("result갯수(업뎃횟수): "+result);
+			
 			
 			if(result > 0) {
 				System.out.println("데이터 저장 완료");
@@ -84,8 +83,17 @@ public class SaleInfoDao {
 					e.printStackTrace();
 				}
 			}
+			
+			if(conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
-		return;
+		return result;
 
 	}
 
