@@ -31,7 +31,7 @@ public class SaleInfoDao {
 
 			conn = DriverManager.getConnection(jdbcUrl, user, pw);
 
-			String sql = "insert into sale (saleCode ,sname, price) values( ?, ?, ? )";
+			String sql = "insert into sale (saleCode ,sname, price) values(?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 
 //			pstmt.setInt(1, 1);
