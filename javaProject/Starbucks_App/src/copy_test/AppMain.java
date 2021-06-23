@@ -13,41 +13,39 @@ public class AppMain {
 	static String currentId;
 
 	public static void main(String[] args) {
-		
-		
-		
-		Scanner sc = new Scanner(System.in);
 
-		try {
-			// 드라이버 로드
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+			Scanner sc = new Scanner(System.in);
 
-			System.out.println("로그인 화면");
-			System.out.println("1. 회원가입");
-			System.out.println("2. 로그인");
-			System.out.println("3. 관리자모드");
-			int num = Integer.parseInt(sc.nextLine().trim());
-			
-			
-			switch (num) {
-			case 1:
-				memManager.memAdd();
-				currentId = memManager.chkLogin(); // 로그인한후 id를 static 변수로 저장
-				
-				break;
-			case 2:			
-				memManager.chkLogin();
-				break;
-			
-			case 3:
-				adminPage.calling();
+			try {
+				// 드라이버 로드
+				Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			default :
-				System.out.println("잘못 눌렀습니다.");
-			}
+				System.out.println("로그인 화면");
+				System.out.println("1. 회원가입");
+				System.out.println("2. 로그인");
+				System.out.println("3. 관리자모드");
+				int num = Integer.parseInt(sc.nextLine().trim());
+
+				switch (num) {
+				case 1:
+					memManager.memAdd();
+					currentId = memManager.chkLogin(); // 로그인한후 id를 static 변수로 저장
+
+					break;
+				case 2:
+					memManager.chkLogin();
+					break;
+
+				case 3:
+					adminPage.calling();
+
+				default:
+					System.out.println("잘못 눌렀습니다.");
+				}
+
 			
-			
-			
+
 			while (true) {
 				System.out.println("1. 주문하기");
 				System.out.println("2. 포인트확인");
@@ -77,8 +75,9 @@ public class AppMain {
 				}
 			}
 		}
-		 catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		
 	}
 }
