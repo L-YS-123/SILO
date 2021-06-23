@@ -14,7 +14,7 @@ public class DeptDao {
 	private DeptDao(){
 	}
 	
-	// 2. 클래스 내부에서 인스턴스를 만들고 
+	// 2. 클래스 내부에서 static(클래스변수) 인스턴스를 만들고 
 	static private DeptDao dao = new DeptDao(); 
 	
 	// 3. 메소드를 통해서 반환 하도록 처리

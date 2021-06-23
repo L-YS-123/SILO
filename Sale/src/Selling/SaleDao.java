@@ -7,12 +7,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class SaleInfoDao {
+public class SaleDao {
 
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 
-	int Dao(Connection conn, SaleInfo saleinfo) {
+	int Dao(Connection conn, Sale saleinfo) {
 
 		Calculator calc = new Calculator();
 		
@@ -32,30 +32,39 @@ public class SaleInfoDao {
 			conn = DriverManager.getConnection(jdbcUrl, user, pw);
 
 			String sql = "insert into sale (saleCode ,sname, price) values(?,?,?)";
-			pstmt = conn.prepareStatement(sql);
-
-//			pstmt.setInt(1, 1);
-//			pstmt.setString(2, "Americano");
-//			pstmt.setInt(3, calc.americano);
-//
-//			pstmt.setInt(1, 2);
-//			pstmt.setString(2, "Cafelatte");
-//			pstmt.setInt(3, calc.cafelatte);
-//
-//			pstmt.setInt(1, 3); // 왜 이거만 들어갔지? -> 배열로 처리해야하나?
-//			pstmt.setString(2, "Cafemocca");
-//			pstmt.setInt(3, calc.cafemocca);
 			
-//			ArrayList<SaleInfo> list = new ArrayList<>();
-//			list.add(new SaleInfo(0,"Americano",calc.americanoPrice));
-//			list.add(new SaleInfo(1,"Cafelatte",calc.cafelattePrice));
-//			list.add(new SaleInfo(2,"Cafemocca",calc.cafemoccaPrice));
+//			ArrayList<Sale> list = new ArrayList<>();
+//			list.add(new Sale(0,"Americano",calc.americanoPrice));
+//			list.add(new Sale(1,"Cafelatte",calc.cafelattePrice));
+//			list.add(new Sale(2,"Cafemocca",calc.cafemoccaPrice));
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, 1);
+			pstmt.setString(2, "Americano");
+			pstmt.setInt(3, calc.americanoPrice);
+
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, 2);
+			pstmt.setString(2, "Cafelatte");
+			pstmt.setInt(3, calc.cafelattePrice);
+
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, 3); // 왜 이거만 들어갔지? -> 배열로 처리해야하나?
+			pstmt.setString(2, "Cafemocca");
+			pstmt.setInt(3, calc.cafemoccaPrice);
+			
+
 			
 //			SaleInfo[] array = new SaleInfo[10];
 //			array[0] = new SaleInfo(1,"Americano",calc.americanoPrice);
 //			array[1] = new SaleInfo(2,"Cafelatte",calc.cafelattePrice);
 //			array[2] = new SaleInfo(3,"Cafemocca",calc.cafemoccaPrice);
 			
+//			for(int i=0; i<3; i++) {
+//				
+//			}
+//			
+//			pstmt.set
 
 			result = pstmt.executeUpdate();
 			System.out.println("result갯수(업뎃횟수): "+result);

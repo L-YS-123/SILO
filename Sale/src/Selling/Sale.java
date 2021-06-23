@@ -2,7 +2,7 @@
 
 package Selling;
 
-public class SaleInfo {
+public class Sale {
 	private int saleCode;
 	private String sname;
 	private int price;
@@ -11,7 +11,7 @@ public class SaleInfo {
 	
 	private double point;
 	
-	public SaleInfo(int saleCode ,String sname, int price) {
+	public Sale(int saleCode ,String sname, int price) {
 		this.saleCode = saleCode;
 		this.sname = sname;
 		this.price = price;

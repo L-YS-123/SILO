@@ -23,7 +23,7 @@ public class ReadSaledProduct {
 		String sql = "Select * from SALE";
 
 		try {
-			SaleInfo si = new SaleInfo();
+			Sale si = new Sale();
 			si.getSaleCode();
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
