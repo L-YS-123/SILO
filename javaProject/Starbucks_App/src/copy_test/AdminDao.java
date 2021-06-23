@@ -11,7 +11,7 @@ public class AdminDao {
 	
 	
 	
-	
+	// 싱글톤
 	private AdminDao() {}
 	
 	static private AdminDao adminDao = new AdminDao();
@@ -46,7 +46,7 @@ public class AdminDao {
 										rs.getString(4),
 										rs.getString(5),
 										rs.getString(6),
-										rs.getString(7)
+										rs.getInt(7)
 										);
 				list.add(admin);
 			}		
@@ -86,7 +86,8 @@ public class AdminDao {
 										rs.getString(3),
 										rs.getString(4),
 										rs.getString(5),
-										rs.getString(6)
+										rs.getString(6), 
+										rs.getInt(7)
 										);
 				list.add(admin);
 			}		

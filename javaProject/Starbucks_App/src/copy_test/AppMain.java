@@ -3,14 +3,15 @@ package copy_test;
 import java.util.Scanner;
 
 public class AppMain {
-	
-	
+
+	static AdminManager adminManager = new AdminManager(MemberDao.getInstance()); // getInstance가 왜 자동으로 안나오지?
 	static MemberManager memManager = new MemberManager(MemberDao.getInstance());
 	static SaleManager saleManager = new SaleManager(SaleDao.getInstance());
-	
+	static MenuManager menuManager = new MenuManager(MenuDao.getInstance());
+	static AdminPage adminPage = new AdminPage();
+
 	static String currentId;
-	
-	
+
 	public static void main(String[] args) {
 		
 		
@@ -26,6 +27,8 @@ public class AppMain {
 			System.out.println("2. 로그인");
 			System.out.println("3. 관리자모드");
 			int num = Integer.parseInt(sc.nextLine().trim());
+			
+			
 			switch (num) {
 			case 1:
 				memManager.memAdd();
@@ -35,13 +38,15 @@ public class AppMain {
 			case 2:			
 				memManager.chkLogin();
 				break;
-		
+			
+			case 3:
+				adminPage.calling();
+
 			default :
 				System.out.println("잘못 눌렀습니다.");
-				
-			case 3:
-//				adminManager.adminLogin();
 			}
+			
+			
 			
 			while (true) {
 				System.out.println("1. 주문하기");
@@ -71,8 +76,8 @@ public class AppMain {
 					}
 				}
 			}
-
-		} catch (ClassNotFoundException e) {
+		}
+		 catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
