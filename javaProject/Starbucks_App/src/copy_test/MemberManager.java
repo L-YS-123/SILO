@@ -34,24 +34,24 @@ public class MemberManager {
 	}
 
 //	 전체 리스트 출력
-//	void memList() {
-//
-//		try {
-//			con = DriverManager.getConnection(jdbcUrl, user, pw);
-//
-//			List<Member> list = dao.getList(con);
-//
-//			System.out.println("■■■■■■■■■■■■■■■■■■■■■■고객 정보 리스트■■■■■■■■■■■■■■■■■■■■■■■");
-//			System.out.println("멤버코드 \t 아이디 \t 비밀번호 \t 이름 \t 전화번호 \t 주소 \t 포인트");
-//			for (Member mem : list) {
-//				System.out.printf("%d \t %s \t %s \t %s \t %s \t %s \t %f \n", mem.getMemcode(), mem.getId(),
-//						mem.getPw(), mem.getName(), mem.getPhone(), mem.getAddress(), mem.getPoint());
-//			}
-//			System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	void memList() {
+
+		try {
+			con = DriverManager.getConnection(jdbcUrl, user, pw);
+
+			List<Member> list = dao.getList(con);
+
+			System.out.println("■■■■■■■■■■■■■■■■■■■■■■고객 정보 리스트■■■■■■■■■■■■■■■■■■■■■■■");
+			System.out.println("멤버코드 \t 아이디 \t 비밀번호 \t 이름 \t 전화번호 \t 주소 \t 포인트");
+			for (Member mem : list) {
+				System.out.printf("%d \t %s \t %s \t %s \t %s \t %s \t %f \n", mem.getMemcode(), mem.getId(),
+						mem.getPw(), mem.getName(), mem.getPhone(), mem.getAddress(), mem.getPoint());
+			}
+			System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 	// 내 정보 출력
 	void myInfo() {
