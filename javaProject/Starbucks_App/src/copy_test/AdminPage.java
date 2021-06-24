@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class AdminPage {
 
-	static AdminManager adminManager = new AdminManager(MemberDao.getInstance()); // getInstance가 왜 자동으로 안나오지?
-	static MemberManager memManager = new MemberManager(MemberDao.getInstance());
-	static SaleManager saleManager = new SaleManager(SaleDao.getInstance());
-	static MenuManager menuManager = new MenuManager(MenuDao.getInstance());
-	static AppMain appMain = new AppMain();
+	AdminManager adminManager = new AdminManager(MemberDao.getInstance()); 
+	MemberManager memManager = new MemberManager(MemberDao.getInstance());
+	SaleManager saleManager = new SaleManager(SaleDao.getInstance());
+	MenuManager menuManager = new MenuManager(MenuDao.getInstance());
+//	AppMain appMain = new AppMain();
+	
 
 	void calling() {
 		
@@ -27,18 +28,19 @@ public class AdminPage {
 			
 			switch (num2) {
 			case 0:
-				appMain.Submain();
-				break;
+				//appMain.SubMain();
+				return;
 			case 1:
-				adminManager.memList();
+//				appMain.memManager.memList();
+				memManager.memList();
 				break;
 			case 2:
-//				saleManager.saleList();
-				adminManager.saleList();
+				saleManager.saleList();
+//				adminManager.saleList();
 				break;
 			case 3:
-//				menuManager.menuList();
-				adminManager.menuList();
+				menuManager.menuList();
+//				adminManager.menuList();
 				break;
 			}
 		}
