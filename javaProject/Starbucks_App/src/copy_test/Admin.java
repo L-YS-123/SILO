@@ -8,9 +8,9 @@ public class Admin { //고객
 	private String pw;
 	private String address;
 	private String phone;
-	private double point;
+	private int point;
 
-	public Admin(int memcode, String name, String id, String pw, String address, String phone, double point) {
+	public Admin(int memcode, String name, String id, String pw, String address, String phone, int point) {
 		super();
 		this.memcode = memcode;
 		this.name = name;
@@ -93,7 +93,7 @@ public class Admin { //고객
 		return point;
 	}
 
-	public void setPoint(double point) {
+	public void setPoint(int point) {
 		this.point = point;
 	}
 
