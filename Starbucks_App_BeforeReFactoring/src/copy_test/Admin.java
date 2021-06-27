@@ -1,6 +1,6 @@
 package copy_test;
 
-public class Admin { //고객
+public class Admin { //관리자
 
 	private int memcode;
 	private String name;

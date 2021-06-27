@@ -15,7 +15,7 @@ public class AdminManager {
 
 	ArrayList<Member> list = new ArrayList<>();
 
-	private MemberDao dao;
+	private AdminDao adDao;
 	private Scanner sc;
 	private String currentId;
 
@@ -27,8 +27,8 @@ public class AdminManager {
 	private String user = "hr";
 	private String pw = "tiger";
 
-	public AdminManager(MemberDao dao) {
-		this.dao = dao;
+	public AdminManager(AdminDao adDao) {
+		this.adDao = adDao;
 		sc = new Scanner(System.in);
 		this.currentId = currentId;
 	}

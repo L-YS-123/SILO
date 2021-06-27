@@ -73,7 +73,3 @@ insert into menu(menucode, mname, price) values (menu_sq.nextval, 'latte', 4700)
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'sandwich', 4800);
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'bagel', 2300);
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'cake', 4800);
-
-commit;
-
-select * from member;
