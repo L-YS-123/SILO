@@ -50,6 +50,7 @@ start with 1;
 -- member 값
 -- id는 a,b,c순
 -- 비밀번호는 1234 통일
+insert into member (memcode, name, id, pw, address, phone, point) values (member_sq.nextval, '관리자', 'admin', '1234', '제주', '01012345678', 1000);
 insert into member (memcode, name, id, pw, address, phone, point) values (member_sq.nextval, '김은선', 'a', '1234', '서울', '01012345678', 1000);
 insert into member (memcode, name, id, pw, address, phone, point) values (member_sq.nextval, '위세라', 'b', '1234', '서울', '01012345678', 1500);
 insert into member (memcode, name, id, pw, address, phone, point) values (member_sq.nextval, '이윤성', 'c', '1234', '서울', '01012345678', 2000);
@@ -73,3 +74,5 @@ insert into menu(menucode, mname, price) values (menu_sq.nextval, 'latte', 4700)
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'sandwich', 4800);
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'bagel', 2300);
 insert into menu(menucode, mname, price) values (menu_sq.nextval, 'cake', 4800);
+
+commit;
