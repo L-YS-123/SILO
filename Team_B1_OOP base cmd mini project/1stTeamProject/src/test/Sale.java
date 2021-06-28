@@ -1,4 +1,4 @@
-package comp;
+package test;
 
 public class Sale {
 	//판매 된 데이터 저장 하기 위해

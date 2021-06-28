@@ -1,4 +1,4 @@
-package comp;
+package test;
 
 public class Menu {				// 메뉴 변수, 생성자 정의
 

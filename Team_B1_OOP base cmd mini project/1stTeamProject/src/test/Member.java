@@ -1,4 +1,4 @@
-package comp;
+package test;
 
 public class Member {		// 회원정보 변수, 생성자 정의
 

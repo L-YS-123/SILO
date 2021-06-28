@@ -1,4 +1,4 @@
-package comp;
+package test;
 
 import java.io.DataOutput;
 import java.sql.Connection;
