@@ -68,20 +68,20 @@ public class AdminPage {
 			int choice = Integer.parseInt(sc.nextLine());
 
 			switch (choice) {
-			case 1:
-				saleManager.saleList();
+			case 1: // 판매 전체 리스트 보기
+				saleManager.saleList(); 
 				break;
-			case 2:
+			case 2: // 당일 총 판매액
 				int totalSalePrice = saleManager.totalSalePrice();
 				System.out.println("당일 총 판매액 : " + totalSalePrice);
 				break;
-			case 3:
+			case 3: // 당일 메뉴별 판매액
 				saleManager.menuSalePrice();
 				break;
-			case 4:
+			case 4: // 인기 상품 조회
 				saleManager.saleBestList();
 				break;
-			case 5:
+			case 5: // 이전 단계로 돌아가기(히스토리백)
 				return;
 			default:
 				System.out.println("잘못 선택하셨습니다.");
@@ -108,19 +108,19 @@ public class AdminPage {
 			
 			int choice = Integer.parseInt(sc.nextLine());
 			switch (choice) {
-			case 1:
+			case 1: 	// 현재 판매 중인 메뉴 보기
 				menuManager.menuList();
 				break;
-			case 2:
+			case 2:		// 메뉴 추가
 				menuManager.menuAdd();
 				break;
-			case 3:
+			case 3:		// 메뉴 수정
 				menuManager.menuEdit();
 				break;
-			case 4:
+			case 4:		// 메뉴 삭제
 				menuManager.menuDel();
 				break;
-			case 5:
+			case 5:		//히스토리 백
 				return;
 			default:
 				System.out.println("잘못 선택하셨습니다.");
@@ -144,13 +144,13 @@ public class AdminPage {
 
 			int choice = Integer.parseInt(sc.nextLine());
 			switch (choice) {
-			case 1:
+			case 1: // 점포 정보 조회
 				memManager.myAdminInfo(Login.currentId);
 				break;
-			case 2:
+			case 2: // 비밀번호 재설정
 				memManager.memAdminEdit(Login.currentId);
 				break;
-			case 3:
+			case 3: // 이전 단계로 가기
 				return;
 			default:
 				System.out.println("잘못 선택하셨습니다.");
