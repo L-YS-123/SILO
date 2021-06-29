@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<!--head: 웹 문서의 추가적인 속성들을 정의해준다-->
+
+<head>
+    <!--문서의 제목-->
+    <title id="contents-0">HTML 기본 태그</title>
+    <!--문서의 추가적인 속성-->
+    <meta charset="utf-8">
+    <!--웹 문서의 문자 셀 설정-->
+    <style>
+        div {
+            background-color: greenyellow;
+            margin-top: 10px;
+            height: 50px;
+        }
+
+        span {
+            background-color: yellow;
+            margin-right: 10px;
+            height: 50px;
+        }
+    </style>
+    <script></script>
+</head>
+
+
+
+
+
+<body>
+    <fieldset>
+        <legend>회원가입 폼</legend>
+        <form>
+            <table>
+                <tr>
+                    <th><label for="userid">아이디(email)</label></th>
+                    <td><input type="email" id="userid" name="userid"></td>
+                </tr>
+                <tr>
+                    <th><label for="pw">비밀번호</label></th>
+                    <td><input type="password" id="pw" name="pw"></td>
+                </tr>
+                <tr>
+                    <th><label for="username">이름</label></th>
+                    <td><input type="text" id="username" name="username"></td>
+                </tr>
+                <tr>
+                    <th><label for="userPhoto">사진</label></th>
+                    <td><input type="file" id="userPhoto" name="userPhoto"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="회원가입"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+
+
+
+
+    <form action="#" method="get">
+        type=text : <input type="text" name="username" value="tester"> <br>
+        type=password : <input type="password" name="pw"> <br>
+        type=checkbox : <input type="checkbox" name="chk" value="ok1">
+        <input type="checkbox" name="chk" value="ok2"><br>
+        type=radio : A<input type="radio" name="choice" value="A">
+        B<input type="radio" name="choice" value="B">
+        C<input type="radio" name="choice" value="C">
+        D<input type="radio" name="choice" value="D">
+        F<input type="radio" name="choice" value="F"> <br>
+        type=color : <input type="color" name="color"> <br>
+        type=datetime-local : <input type="datetime-local" name="localDatetime"><br>
+        type=date : <input type="date" name="date"><br>
+        type=time : <input type="time" name="time"><br>
+        type=month : <input type="month"><br>
+        type=week : <input type="week"> <br>
+        type=email : <input type="email" name="email"><br>
+        type=file : <input type="file" name="userPhoto"><br>
+        type=hidden : 화면에는 표현되지 않는다.
+        <input type="hidden" name="idx" value="1"> <br>
+        type=image : <input type="image" src="미니언즈1.jpg" height="50"><br>
+        type=number : <input type="number" name="num"> <br>
+        type=range : <input type="range" name="age" min="0" , max="150"> <br>
+        type= tel : <input type="tel"> <br>
+        type=url : <input type="url" name="url"><br> <br> <br>
+        <select>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+        <br><br>
+        <input type="submit"> <input type="reset">
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <p>
+    <h1>
+        html.pdf에서 입력 양식 개요 중요. 별표 10개
+        <br>
+        205기 카페에서 마지막 영상 다시 보자
+        <br>
+        개인정보는 post방식으로 보냄. get방식 x
+        <br>
+        form에서 서버에 전송할 때 submit 반드시 필요.
+        <br>
+        radio버튼 = 선택사항 체크할 때 나오는 거
+        <br>
+        select = 목록 접었다 폈다
+        <br>
+        체크박스 = 중복o , 라디오박스 = 중복x
+    </h1>
+    </p>
+
+    <video src="media/trailer.mp4" controls poster="images/아반떼.jpg" width="400" height="300"></video>
+
+
+    <audio src="media/old_pop.mp3" controls loop></audio>
+    <!--왜 그냥 슬래시? 역슬래시 왜 안 되지-->
+
+
+    <p>
+        시멘틱: 기능은 같지만 다른 이름으로 의미를 부여.
+        컴퓨터 프로그램(검색엔진)이 코드를 읽고
+        의미를 인식할 수 있음.
+        코드의 가독성이 좋아진다
+    </p>
+
+
+    <div>블록: 왼쪽 처음부터 오른쪽 끝까지 100% 영역</div>
+    <div>div - 1 고정된 사이즈</div>
+    <div>div - 2</div>
+    <div>div - 3</div>
+
+    <!--인라인: 글자 크기만큼의 영역-->
+    <span>span - 1</span>
+    <span>span - 2</span>
+    <span>span - 3 인라인: 글자사이즈 만큼 늘어난다</span>
+
+    <hr>
+
+    <!-- 인라인-블록형식: 이미지 태그 -->
+    <img src="미니언즈1.jpg" height="100">
+    <!--height: 폭은 비율에 맞게 자동 조절-->
+    <img src="미니언즈2.jpg" width="100">
+    <!--width는 잘 모르겠음-->
+    <img src="C:\Users\1\Documents\GitHub\WEB\images\아반떼.jpg" width="100" alt="이미지없음">
+
+    <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" width="100">
+    <img src="http://placehold.it/500x100">
+    <!--내용없는 이미지 생성-->
+
+
+    <hr>
+
+
+
+
+    <!-- 테이블을 병합하는 방법: 
+        1. 가장 간단한 형태의 테이블 생성,
+        2. 병합,
+        3. 불필요부분 삭제 -->
+
+    <table border="1">
+        <tr>
+            <td colspan="2">cell</td>
+
+        </tr>
+        <tr>
+            <td rowspan="3">cell</td>
+            <td>cell</td>
+        </tr>
+        <tr>
+            <td>cell</td>
+
+        </tr>
+        <tr>
+            <td>cell</td>
+
+        </tr>
+        <tr>
+            <td rowspan="4">cell</td>
+            <td>cell</td>
+        </tr>
+        <tr>
+            <td>cell</td>
+
+        </tr>
+        <tr>
+            <td>cell</td>
+
+        </tr>
+        <tr>
+            <td>cell</td>
+
+        </tr>
+    </table>
+
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>thead1</td>
+                <td>thead2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tbody 1-1</td>
+                <td>tbody 1-2</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>tfoot 1</td>
+                <td>tfoot 2</td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+    <table border="1">
+        <!-- 테이블 바디가 없는데, 브라우저에서 자동으로 생성된다 기억하자-->
+        <tr>
+            <th>thead1</th>
+            <th>thead2</th>
+        </tr>
+        <tr>
+            <td>tbody 1-1</td>
+            <td>tbody 1-2</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+        </tr>
+        <tr>
+            <td>tfoot 1</td>
+            <td>tfoot 2</td>
+        </tr>
+
+
+    </table>
+
+
+
+    <!-- 문서가 아니면 잘 사용하지 않는다 
+    웹사이트에선 네비게이션을 이용하여 메뉴를 만드는게 보편적-->
+    <ul>
+        <li>사과</li>
+        <li>포도</li>
+        <li>바나나</li>
+    </ul>
+
+    <ol>
+        <li>귤</li>
+        <li>포도</li>
+    </ol>
+
+
+    <!--하이퍼링크-->
+    <a href="http://www.bitcamp.co.kr">비트캠프</a>
+    <a href="www.naver.com">네이버</a>
+    <!--반드시 http:// or https://로 시작해야 연결된다-->
+    <a href="http://daum.net">다음</a>
+
+    <a href="#contents-1">홍차</a>
+    <a href="#contents-2">외국어문서</a>
+    <a href="#contents-0">헤더태그</a>
+
+
+    <h1 id="contents-1">홍차</h1>
+    <hr>
+    <h3>정의</h3>
+    <p>
+        홍차는 우롱차보다 더 많이 발효된 차의 일종이다.
+    </p>
+    <p>
+
+    <h3>등급</h3>
+    <p>
+        홍차는 여러 가지로 등급이 매겨진다.
+    </p>
+    - 브로큰 페코<br><br>
+    - 브로큰 페코 수숑<br><br>
+    - 브로큰 오렌지 페코 수숑
+
+
+    <h1 id="contents-2">제목 글자</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <br>
+        Morbi rutrum pretium elit, at iaculis dui congue facilisis.
+        <br>
+        Sed lorem urna, adipiscing eget pharetra ullamcorper, facilisis id sapien. Phasellus ac pellentesque odio.
+    </p>
+    <p>Integer nibh tellus, tristique quis blandit quis, consequat in nunc.</p>
+
+    <!-- &lt = less than(작다), &gt = greater than(크다)-->
+    <h1> a&lt;b b&gt;c </b> </h1>
+
+    <!--h1~h6 -> 제목 표현, 글자를 굵게 표현/태그에 따라 크기를 다르게 표현-->
+    <h1>header - &nbsp;
+        <!--&nbsp; = 띄어쓰기--> h1
+    </h1>
+    <h2>header - h2</h2>
+    <h3>header - h3</h3>
+    <h4>header - h4</h4>
+    <h5>header - h5</h5>
+    <h6>header - h6</h6>
+
+
+
+
+
+
+</body>
+
+</html>
