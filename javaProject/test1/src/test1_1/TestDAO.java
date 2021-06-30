@@ -18,12 +18,8 @@ public class TestDAO {
 
 	String sql = "select * from member ";
 	
-	
-	
-	
-	
-	// 1.
-	ArrayList<TestMemberInfo> saveList(Connection con) {
+	// 1. db데이터 불러와서 어레이리스트에 저장
+	ArrayList<TestMemberInfo> saveList(Connection con) {	// 매개변수로  Connection con을 입력해야 db에 연결이 되는듯?
 		
 		ArrayList<TestMemberInfo> list = new ArrayList<>();
 		
