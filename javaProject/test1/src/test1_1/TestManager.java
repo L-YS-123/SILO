@@ -10,22 +10,27 @@ public class TestManager extends TestDAO {
 		super();
 	}
 
+	Connection con;
+
+	// 1. 받아온 리스트를 for-each 문으로 출력
 	public void listOut() {
 
 		try {
-			con = DriverManager.getConnection(super.url, super.user, super.password);
-
-			ArrayList<TestMemberInfo> list = super.saveList(con);
-
-			for (TestMemberInfo mem : list) {
-				System.out.printf("%d,%s,%s,%s,%s,%s,%d \n", mem.getMemcode(), mem.getName(), mem.getId(), mem.getPw(),
-						mem.getAddress(), mem.getPhone(), mem.getPoint());
+			con = DriverManager.getConnection(url, user, password);
+//			ArrayList<TestMemberInfo> list = super.saveList(con);
+			
+			for (TestMemberInfo tmi : super.saveList(con)) {
+				System.out.printf("%d,%s,%s,%s,%s,%s,%d \n", tmi.getMemcode(), tmi.getName(), tmi.getId(), tmi.getPw(),
+						tmi.getAddress(), tmi.getPhone(), tmi.getPoint());
+				System.out.println(tmi.toString());
 			}
-
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+
 
 	}
 }

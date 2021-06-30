@@ -12,7 +12,13 @@ public class TestMemberInfo {
 	public TestMemberInfo() {}
 	
 	public TestMemberInfo(int memcode, String name, String id, String pw, String address, String phone, int point) {
-		
+		this.memcode=memcode;
+		this.name=name;
+		this.id=id;
+		this.pw=pw;
+		this.address=address;
+		this.phone=phone;
+		this.point=point;
 	}
 
 	public int getMemcode() {

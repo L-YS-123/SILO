@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestDAO {
 	Connection con = null;
@@ -18,31 +17,59 @@ public class TestDAO {
 	String password = "tiger";
 
 	String sql = "select * from member ";
-
-	ArrayList<TestMemberInfo> list = new ArrayList<>();
-
+	
+	
+	
+	
+	
+	// 1.
 	ArrayList<TestMemberInfo> saveList(Connection con) {
-
+		
+		ArrayList<TestMemberInfo> list = new ArrayList<>();
+		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, user, password);
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
-
+			
+			TestMemberInfo tmi = new TestMemberInfo();
+			
 			// memberinfo 타입 리스트 생성 -> rs.next()가 있으면 list에 저장
-
 			while (rs.next()) {
-				list.add(new TestMemberInfo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
-						rs.getString(5), rs.getString(6), rs.getInt(7)));
+				tmi = new TestMemberInfo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
+						rs.getString(5), rs.getString(6), rs.getInt(7));
+				
+				list.add(tmi);
 			}
-
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				ps.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return list;
+		
 	}
 }
