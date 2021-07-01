@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .border {
+            border: 1px solid #aaa;
+            text-align: center;
+        }
+
+        .text_center {
+            text-align: center;
+        }
+
+        .font_size_200p {
+            font-size: 200%;
+        }
+
+        header {
+            width: 798px;
+            height: 80px;
+
+            line-height: 80px;
+        }
+
+        nav {
+            width: 798px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        section {
+            float: left;
+            width: 598px;
+            height: 400px;
+        }
+
+        aside {
+            float: right;
+            width: 198px;
+            height: 200px;
+        }
+
+        #wrap {
+            overflow: hidden;
+            width: 800px;
+        }
+        footer{
+            width: 798px;
+            height: 100px;
+            line-height: 100px;
+        }
+        .div_align_center {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="border text_center font_size_200p div_align_center">header</header>
+    <nav class="border text_center font_size_200p div_align_center">메뉴 영역</nav>
+    <div id="wrap" class="div_align_center" >
+        <section class="border text_center font_size_200p ">
+            <article>내용</article>
+        </section>
+        <aside class="border text_center font_size_200p ">
+            서브 메뉴 영역
+        </aside>
+    </div>
+    <footer class="border text_center font_size_200p div_align_center">
+        footer
+    </footer>
+</body>
+
+</html>

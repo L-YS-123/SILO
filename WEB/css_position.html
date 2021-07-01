@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        div.box {
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+        }
+
+        #b1 {
+            background-color: red;
+            left: 50px;
+            top: 50px;
+            z-index: -99999999999;
+        }
+
+        #b2 {
+            background-color: green;
+            left: 100px;
+            top: 100px;
+
+        }
+
+        #b3 {
+            background-color: blue;
+            left: 150px;
+            top: 150px;
+
+        }
+
+        header {
+            border: 1px solid #ddd;
+        }
+        footer {
+            border: 1px solid #ddd;
+        }
+        #wrap {
+            height: 100px;
+            width: 500px;
+            border: 1px solid #ddd;
+
+            position: relative;
+            
+            /* overflow: auto; */
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>헤더영역 입니다</header>
+
+    <div id="wrap">
+        <div id="b1" class="box"></div>
+        <div id="b2" class="box"></div>
+        <div id="b3" class="box"></div>
+    </div>
+
+    <footer>풋터 영역입니다</footer>
+</body>
+
+</html>
