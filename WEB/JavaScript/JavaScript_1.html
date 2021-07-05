@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript 기본문법</title>
+    <!--JavaScript는 html문서안에서 실행함-->
+    <!--<script>...</script>-->
+    <!--자바스크립트는 head태그 사이에 위치, body 태그 안에도 위치가 가능-->
+    <!--html의 문서는 1라인부터 아래도 실행된다! 
+        -> 필요에 따라 자바스크립트의 위치를 변경해주어야 한다.-->
+    <script>
+        // alert함수는 사용자에게 경고 메시지를 출력합니다.
+        // alert('JavaScript Hello~');
+    </script>
+    <script>
+
+        //window.onload: 브라우저가 html문서의 내용을 모두 로드 했을때 발생하는 이벤트 속성
+        //이벤트 속성에는 핸들러(이벤트 처리 함수)를 등록한다
+        window.onload = function() {
+            
+            var list = '';
+            // list = list + '<ul>\n';
+            // list = list + '<li>JavaScript</li>\n';
+            // list = list + '<li>jQuery</li>\n';
+            // list = list + '</ul>\n';
+
+            list += '<ul>\n';
+            list += '<li>JavaScript</li>\n';
+            list += '<li>jQuery</li>\n';
+            list += '</ul>\n';
+
+            console.log('출력할 html : ',list);  // 모든 타입의 데이터를 출력한다.
+
+            //html 문서의 body태그에 list가 가지는 문자열을 html 태그로 삽입
+
+            // 문서객체 캐스팅 -> 태그를 자바스크립트의 객체로 만드는것
+            document.body.innerHTML = list;
+
+            // 문서객체를 캐스팅 -> html 컨트롤
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        // alert('body 태그에 \n "스크립트"를 작성했습니다.');
+        // alert('<a href="https://naver.com">naver</a>'); // 주로 이 방법을 사용
+        // alert("<a href=\"https://naver.com\">naver</a>");
+
+    </script>
+
+</body>
+
+
+</html>
+
+<script>
+    // javascript에서 숫자는 정수와 실수를 구분하지 않고 하나의 타입으로 관리
+    // 숫자 -> number 타입 하나로 처리
+    // var num = 10;
+    // alert(num);
+    // num = 10.2;
+    // alert(num);
+
+    // alert(5+3*2);   // 11
+    // alert((5+3)*2); // 16
+
+    // 문장의 종결을 의미하는 ;은 생략 가능하지만 꼭 붙여주도록 하자
+
+</script>
+
+<script>
+    // //비교연산: > < >= <= == !=
+
+    // // === -> 타입비교 + 동등비교 (문자와 숫자 비교할 때)
+
+    // //java와 달리 문자열의 비교도 가능하다 -> 유니코드 값으로 비교
+    // //국어사전의 앞 쪽( ㄱㄴㄷㄹ 순) 일수록 작은 값
+    // alert('가 == 가:' + ('가' == '가'));
+    // alert('가 == 하:' + ('가' == '하'));
+    // alert('가 > 하 : ' + ('가' > '하'));
+    // alert('가< 하 : ' + ('가' < '하'));
+
+    // // true -> 1, false -> 0;
+    // alert('true < false : ' + (true < false));
+</script>
+
+<script>
+    // alert(true);
+    // alert(false);
+
+    // //논리 부정 연산자: !
+    // alert('!true: ' + !true);
+
+    // var num = 10 > 9;
+    // var chk = num>0 && num<100; // 0보다 크고 100보다 작은지 체크
+
+    // if(num>0) {
+    //     //조건식의 결과가 true 일때 실행하는 블록{}
+    //     alert('num 변수의 값은 0보다 큰 값이다');
+    // }
+
+    // if(chk) {
+    //     alert('num의 값은 0보다 크고 100보다 작은 숫자입니다');
+    // }
+
+</script>
+
+<script>
+    // //JavaScript의 변수
+    // // 변수는 해당 값을 저장하는 것이 아니라
+    // // 값이 저장된 메모리의 '주소값'을 저장한다. -> 컴파일 언어와 다른점 
+
+    // // 변수의 선언: var 키워드
+    // //  var 키워드 식별자;
+
+    // // 변수 pi 선언
+    // var pi; // 변수 pi 생성 -> undefined 값으로 자동 초기화
+    // alert(pi);
+
+    // // 변수 pi에 값을 할당(대입)
+    // pi = 3.141592; // 숫자타입의 값을 저장
+    // alert(pi);
+    
+    // // 변수 선언과 할당을 동시에
+    // var PI = 3.14
+    // alert(PI);
+
+</script>
+
+<script>
+    //JavaScript의 타입
+    // 1.문자열: '' or ""
+    // 2.숫자: 정수,실수 구분x , 8바이트 부동소수점 형식으로 저장
+    // 3.bool: true / false 논리값을 저장
+
+    // 4.함수: 함수의 주소값을 저장
+    // 5.객체: 객체를 저장
+    // 6.undefined: undefined 상태값을 저장
+
+    // var str = 'String';
+    // var num = 100;
+    // var check = false;
+
+    // alert(str);
+    // alert(num);
+    // alert(check);
+
+    // var printStr = function() {
+    //     alert('함수를 저장하는 변수로 호출');
+    // };  // 익명함수로 정의
+
+    // // alert(printStr);
+
+    // var objectVar = {
+    //     name:'son', age:30 , hello: function(){alert('메소드호출')}
+    // }; // 객체를 정의하는 간단한 방법
+
+    // // alert(objectVar);
+
+    // alert(objectVar.name);
+    // alert(objectVar.age);
+    // objectVar.hello();
+
+    // // 내장함수 객체 생성
+    // var now = new Date();
+    // alert(now);
+
+
+    // // 객체 정의: 속성(객체가 가지는 변수), 메소드(객체가 가지는 기능(함수))
+    // var person = {
+    //     name:'son',
+    //     age:30,
+    //     hello: function() {
+    //         'ㅇㅇㅇ'
+    //     }
+    // };
+
+    // alert(person);
+
+   
+
+</script>
+
+<script>
+    var value = 10;
+    value += 20;
+    alert(value);
+
+    value = 'JavaScript';   //Java와 달리 같은변수 재선언 가능
+    alert(value);
+</script>
+
+<script>
+    var func = function(){
+
+    }
+    var obj = {};
+
+    //자료형의 검사 or 확인: typeof
+    console.log(typeof ('가나다라'));
+    console.log(typeof(273));
+    console.log(typeof(true));
+    console.log(typeof( function(){} ));
+    console.log(typeof(obj));
+    console.log(typeof(value11)) // undefined
+
+    if(typeof(273) == 'number') {   // number에 ''붙여줘야 함
+        alert('숫자형 데이터입니다');
+    }
+</script>
