@@ -80,13 +80,14 @@
             }
 
             var p1 = document.getElementById('p1');
-            p1.onclick = function (e){
+            p1.onclick = function (e){ // 만약 마우스 클릭 입력이 안 되었을 때를 대비해서
                 var event = e || window.event;
                 console.log(event)
                 console.log(window.event)
 
                 alert('P Click');
 
+                // 핵심기능
                 // IE 일때
                 event.cancelBubble = true;
                 // IE 이외의 브라우저일때
