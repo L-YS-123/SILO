@@ -50,7 +50,7 @@ window.onload = function () {
     var repw = document.querySelector('#repw');
     var userName = document.querySelector('#userName');
 
-    // regForm 캐스팅
+    // regForm 캐스팅 , 캐스팅: 태그를 문서객체로 만드는 것
     var regForm = document.getElementById('regForm');
 
     regForm.onsubmit = function () {
