@@ -43,8 +43,7 @@ window.onload = function () {
 
 
 
-    // // 테이블 세팅
-    // setList();
+    
 
     var userid = document.querySelector('#userID');
     var pw = document.querySelector('#pw');
