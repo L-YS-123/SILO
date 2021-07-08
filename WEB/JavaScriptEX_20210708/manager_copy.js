@@ -44,7 +44,7 @@ window.onload = function () {
 
 
     
-
+    // 사용자가 입력한 값 
     var userid = document.querySelector('#userID');
     var pw = document.querySelector('#pw');
     var repw = document.querySelector('#repw');
@@ -55,7 +55,7 @@ window.onload = function () {
 
     regForm.onsubmit = function () {
 
-        // 사용자가 입력한 값 
+        // 사용자가 입력한 값 .value
         // var userid = document.querySelector('#userID').value;
         // var pw = document.querySelector('#pw').value;
         // var repw = document.querySelector('#repw').value;
