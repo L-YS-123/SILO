@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+        </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberManager_jQuery</title>
+
+    <link rel="stylesheet" href="default2.css">
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('<h1></h1>');
+            $('<h1></h1>').html('Member Manager').appendTo('body');
+
+            $('<h2></h2>').html('회원 정보 등록').appendTo('body');
+
+            
+            var html1 = '<div id="regFormArea">'; 
+            html1 += '<table>';
+            html1 += '<tr>';
+                
+            html1 += '<td>';
+            html1 += '<label for="userID"> 아이디 </label>';
+            html1 += '<input type="text" placeholder="아이디를 입력해주세요" id="userID">';
+            html1 += '</td>';
+
+            html1 += '<td>';
+            html1 += '<label for="pw"> 비밀번호 </label>';
+            html1 += '<input type="password" placeholder="비밀번호를 입력해주세요" id="pw">';
+            html1 += '</td>';
+
+            html1 += '<td>';
+            html1 += '<label for="repw"> 비밀번호 확인 </label>';
+            html1 += '<input type="password" placeholder="비밀번호를 입력해주세요" id="repw">';
+            html1 += '</td>';
+
+            html1 += '<td>';
+            html1 += '<label for="userName"> 이름 </label>';
+            html1 += '<input type="text" placeholder="이름 입력해주세요" id="userName">';
+            html1 += '</td>';
+
+            html1 += '<td>';
+            html1 += '<input type="submit" value="등록">';
+            html1 += '<input type="reset">';
+            html1 += '</td>';
+
+            html1 += '</tr>';
+            html1 += ' </table>';
+            html1 += '</div>';
+
+            document.body.innerHTML += html1;
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div id="regFormArea">
+
+    </div>
+
+
+
+</body>
+
+</html>
