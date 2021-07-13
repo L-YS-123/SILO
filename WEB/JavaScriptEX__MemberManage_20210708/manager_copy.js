@@ -128,27 +128,27 @@ window.onload = function () {
         return false;
     }
 
-    userid.addEventListener('focus', function () {
-        document.querySelector('#userID+div.msg').style.display = 'none';
-        document.querySelector('#userID+div.msg').innerHTML = '';
-        //userid.value='';
-    });
+    // userid.addEventListener('focus', function () {
+    //     document.querySelector('#userID+div.msg').style.display = 'none';
+    //     document.querySelector('#userID+div.msg').innerHTML = '';
+    //     //userid.value='';
+    // });
 
-    pw.addEventListener('focus', function () {
-        document.querySelector('#pw+div.msg').style.display = 'none';
-        document.querySelector('#pw+div.msg').innerHTML = '';
-    });
+    // pw.addEventListener('focus', function () {
+    //     document.querySelector('#pw+div.msg').style.display = 'none';
+    //     document.querySelector('#pw+div.msg').innerHTML = '';
+    // });
 
-    repw.addEventListener('focus', function () {
-        document.querySelector('#repw+div.msg').style.display = 'none';
-        document.querySelector('#repw+div.msg').innerHTML = '';
-        repw.value = '';
-    });
+    // repw.addEventListener('focus', function () {
+    //     document.querySelector('#repw+div.msg').style.display = 'none';
+    //     document.querySelector('#repw+div.msg').innerHTML = '';
+    //     repw.value = '';
+    // });
 
-    userName.addEventListener('focus', function () {
-        document.querySelector('#userName+div.msg').style.display = 'none';
-        document.querySelector('#userName+div.msg').innerHTML = '';
-    });
+    // userName.addEventListener('focus', function () {
+    //     document.querySelector('#userName+div.msg').style.display = 'none';
+    //     document.querySelector('#userName+div.msg').innerHTML = '';
+    // });
 
 
 
