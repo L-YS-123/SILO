@@ -9,14 +9,14 @@
 </style>
 <script>
 </script>
-	<link href="blog/css/myblog_css.css" rel="stylesheet" type="text/css">
+	<link href="css/myblog_css.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="main_wrap">
-		<%@ include file="blog/header.jsp"%>
-		<%@ include file="blog/navigation.jsp"%>
-		<%@ include file="blog/contents.jsp"%>
-		<%@ include file="blog/footer.jsp"%>
+		<%@ include file="header.jsp"%>
+		<%@ include file="navigation.jsp"%>
+		<%@ include file="contents.jsp"%>
+		<%@ include file="footer.jsp"%>
 	</div>
 </body>
 </html>
