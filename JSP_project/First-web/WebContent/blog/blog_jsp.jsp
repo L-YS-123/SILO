@@ -13,10 +13,10 @@
 </head>
 <body>
 	<div id="main_wrap">
-		<%@ include file="header.jsp"%>
-		<%@ include file="navigation.jsp"%>
-		<%@ include file="contents.jsp"%>
-		<%@ include file="footer.jsp"%>
+		<%@ include file="JSPs/header.jsp"%>
+		<%@ include file="JSPs/navigation.jsp"%>
+		<%@ include file="JSPs/contents.jsp"%>
+		<%@ include file="JSPs/footer.jsp"%>
 	</div>
 </body>
 </html>
