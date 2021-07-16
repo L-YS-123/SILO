@@ -1,25 +1,19 @@
-<!-- 디렉티브 영역: @로 시작, 속성을 지정 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	//자바코드 영역
-	java.util.Date now = new java.util.Date();
-%>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
 <style>
 </style>
-
 <script>
 </script>
-
 </head>
 <body>
-	<!-- 날짜와 시간을 출력 -->
-	<%= now %>
+	<%
+		String name = "SON";
+	%>
+	안녕하세요 <%= name %>
 </body>
 </html>
