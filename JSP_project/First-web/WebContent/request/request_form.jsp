@@ -33,17 +33,15 @@
 			</tr>
 			<tr>
 				<td>관심사항 
-				<input type="checkbox" name="interest" value="java">html 
-				<input type="checkbox" name="interest" value="css3">css3
-				<input type="checkbox"name="interest" value="javascript">javascript 
-				<input type="checkbox"name="interest" value="jsp">jsp
+				<input type="checkbox" name="interest" value="java">html
+					<input type="checkbox" name="interest" value="css3">css3 
+					<input type="checkbox" name="interest" value="javascript">javascript
+					<input type="checkbox" name="interest" value="jsp">jsp
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-				<input type="submit"> 
-				<input type="reset">
-				</td>
+				<td colspan="2"><input type="submit"> <input
+					type="reset"></td>
 			</tr>
 
 		</table>

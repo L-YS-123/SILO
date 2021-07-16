@@ -5,14 +5,22 @@
 	// 사용자가 전달한 데이터의 한글 처리
 	request.setCharacterEncoding("utf-8");
 
+	//String userId = request.getParameter("userId");
+	//String userPw = request.getParameter("userPw");
 	String userName = request.getParameter("username");
 	String job = request.getParameter("job");
 
 	String[] interests = request.getParameterValues("interest");
 	
+	
+	//request.setAttribute("userId", userId);
+	//request.setAttribute("userPw", userPw);
 	request.setAttribute("userName", userName);
 	request.setAttribute("job", job);
-	request.setAttribute("age", 30);	// 30 -> auto Boxing	
+	request.setAttribute("age", 30);	// 30 -> auto Boxing
+										// 숫자,문자열 타입은 변수와 달리 초기화 없이 가능
+	
+	
 	
 %>
 <!DOCTYPE html>
@@ -31,6 +39,10 @@
 	<h1>request Form Test</h1>
 	<hr>
 	<table border="1">
+		<tr>
+			<td>아이디</td>
+			<td><%= userId %></td>
+		</tr>
 		<tr>
 			<td>이름</td>
 			<td>
@@ -59,10 +71,7 @@
 		</tr>
 
 		<tr>
-			<td></td>
-			<td>
-				<jsp:include page="view.jsp">
-			</td>
+
 			
 		</tr>
 
