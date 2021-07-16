@@ -9,7 +9,7 @@
 </style>
 <script>
 </script>
-	<link href="css/myblog_css.css" rel="stylesheet" type="text/css">
+	<link href="/First-web/blog/css/myblog_css.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="main_wrap">

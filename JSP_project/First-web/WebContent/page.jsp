@@ -22,5 +22,15 @@
 	<%@ include file="include/shopping.jsp" %>
 	</div>
 	
+	실행된 jsp->html 결과를 가져온다
+	<jsp:include page="footer.jsp">
+		<jsp:param value="email" name="test@gmail.com"/>
+		<jsp:param value="010-0000-0000" name="tel"/>
+	</jsp:include>
+	
+	
+	
+	
+	
 </body>
 </html>
