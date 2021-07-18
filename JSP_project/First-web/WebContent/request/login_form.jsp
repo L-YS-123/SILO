@@ -1,18 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-</style>
-<script>
-</script>
-</head>
-<body>
-
+<form>
+	<div>
+	<label for="userId">아이디</label>
+	<input type="text" name="userId">
+	<br>
+	<label for="userPw">비밀번호</label>
+	<input type="password" name="userPw">
+	</div>
 	
-
-</body>
-</html>
+	<div>
+	<input type="submit">
+	</div>
+</form>

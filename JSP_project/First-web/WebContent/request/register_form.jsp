@@ -1,16 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-</style>
-<script>
-</script>
-</head>
-<body>
+	pageEncoding="UTF-8"%>
+<div>
+	<input type="button" id="userResister" value="회원가입" onclick="register_onClick();">
+</div>
 
-</body>
-</html>
+<div  style="display:none">
+	<table id="popUp">
+		<tr>
+			<td>아이디</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="password"></td>
+		</tr>
+	</table>
+</div>
+
+<script>
+	//$("#popUp").hide();
+
+	function register_onClick() {
+		// 온클릭시 회원가입 창이 뜨도록
+		$('#popUp').show();
+	}
+</script>
+

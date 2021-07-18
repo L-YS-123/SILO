@@ -15,6 +15,21 @@
 
 	<h1>request Form Test</h1>
 	<hr>
+	
+	<!-- 로그인 영역 -->
+	<form action="login_result.jsp" method="post">
+	<%@ include file="login_form.jsp"%>
+	</form>
+	
+	<br>
+	
+	<!-- 회원가입 영역 -->
+	<form action="register_result.jsp" method="post">
+	<%@ include file="register_form.jsp"%>
+	</form>
+	
+	<hr>
+	
 	<!-- 데이터를 처리할 위치로 전송: input 요소에 name 속성을 반드시!!! 해주어야 한다!!!!  -->
 	<!-- 데이터전달 -> method="post"를 주로 이용한다 -->
 	<form action="request_result.jsp" method="post">
@@ -32,10 +47,9 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td>관심사항 
-				<input type="checkbox" name="interest" value="java">html
-					<input type="checkbox" name="interest" value="css3">css3 
-					<input type="checkbox" name="interest" value="javascript">javascript
+				<td>관심사항 <input type="checkbox" name="interest" value="java">html
+					<input type="checkbox" name="interest" value="css3">css3 <input
+					type="checkbox" name="interest" value="javascript">javascript
 					<input type="checkbox" name="interest" value="jsp">jsp
 				</td>
 			</tr>

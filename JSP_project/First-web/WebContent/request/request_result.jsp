@@ -40,10 +40,6 @@
 	<hr>
 	<table border="1">
 		<tr>
-			<td>아이디</td>
-			<td><%= userId %></td>
-		</tr>
-		<tr>
 			<td>이름</td>
 			<td>
 				<%= userName %>
