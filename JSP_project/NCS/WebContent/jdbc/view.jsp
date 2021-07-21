@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="member.Member"%>
-"WebContent/JDBC/dept_list.jsp"
+
 <%
 	List<Member> list = (List<Member>) request.getAttribute("result");
 %>

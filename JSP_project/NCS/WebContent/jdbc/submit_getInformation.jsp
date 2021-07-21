@@ -14,7 +14,9 @@
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String name = request.getParameter("name");
+	
 	int resultCnt = 0;
+	
 	// 2. DB 처리 : insert
 	// 데이터베이스 드라이버 로드
 	Connection conn = null;

@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import member.dao.MemberDao;
+
 import jdbc.util.JdbcUtil;
 import member.Member;
 
@@ -19,7 +19,7 @@ public class MemberDao {
 	private static MemberDao memdao = new MemberDao();
 	
 	public static MemberDao getInstance() {
-		return memdao == null ? new MemberDao() : memdao;
+		return memdao ;
 	}
 
 
@@ -58,7 +58,7 @@ public class MemberDao {
 		int resultCnt=0;
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into ncs values (?,?,?)";
+		String sql="insert into ncs values (?, ?, ?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);

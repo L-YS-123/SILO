@@ -22,11 +22,11 @@
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="password" name="pw"  ></td>
+				<td><input type="password" name="pw"></td>
 			</tr>
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="name" ></td>
+				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
 				<td>
