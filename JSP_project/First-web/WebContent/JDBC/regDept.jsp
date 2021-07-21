@@ -1,6 +1,6 @@
 <%@page import="dept.domain.Dept"%>
 <%@page import="dept.dao.DeptDao"%>
-<%@page import="JDBC.util.ConnectionProvider"%>
+<%@page import="jdbc.util.ConnectionProvider"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>

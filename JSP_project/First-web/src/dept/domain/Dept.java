@@ -15,7 +15,7 @@ public class Dept {
 	public Dept() {
 	}
 	
-	//            deptno
+	//deptno
 	public int getDeptno() {
 		return deptno;
 	}

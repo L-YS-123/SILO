@@ -11,7 +11,7 @@ import java.util.List;
 import javax.print.attribute.standard.PrinterIsAcceptingJobs;
 
 import dept.domain.Dept;
-import JDBC.util.JdbcUtil;
+import jdbc.util.JdbcUtil;
 
 public class DeptDao {
 

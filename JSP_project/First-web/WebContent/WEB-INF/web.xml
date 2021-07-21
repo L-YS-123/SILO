@@ -12,7 +12,7 @@
   
   <servlet>
   	<servlet-name>Loader</servlet-name>
-  	<servlet-class>JDBC.util.Loader</servlet-class>
+  	<servlet-class>jdbc.util.Loader</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
   

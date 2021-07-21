@@ -43,7 +43,7 @@
 			for(int i=0; i<list.size(); i++){
 				%>
 		<tr>
-			<td><%= list.get(i).getDeptno() %></td>			
+			<td><%= list.get(i).getDeptno() %></td>	
 			<td><%= list.get(i).getDname() %></td>
 			<td><%= list.get(i).getLoc() %></td>
 			<td>
