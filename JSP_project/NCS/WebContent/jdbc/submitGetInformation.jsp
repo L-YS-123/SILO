@@ -15,17 +15,21 @@
 	String pw = request.getParameter("pw");
 	String name = request.getParameter("name");
 	
+	out.println(id+pw+name);
+	
 	int resultCnt = 0;
 	
 	// 2. DB 처리 : insert
 	// 데이터베이스 드라이버 로드
 	Connection conn = null;
-	MemberDao memdao = null;
+	//MemberDao memdao = null;	//memdao를 null로 설정, 객체생성을 하지 않았기 때문에 오류가 생김
+	MemberDao memdao = MemberDao.getInstance();
 	try {
 		conn = ConnectionProvider.getConnection();
 		resultCnt = memdao.insertMember(conn, new Member(id, pw, name));
 
 	} catch (Exception e) {
+		e.printStackTrace();
 	}
 	if (resultCnt > 0) {
 %>

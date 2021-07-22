@@ -58,7 +58,7 @@ public class MemberDao {
 		int resultCnt=0;
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into member values (?, ?, ?, default)";
+		String sql="insert into member (id, pw, name) values (?, ?, ?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
