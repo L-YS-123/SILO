@@ -32,7 +32,7 @@ public class MemberDao {
 		
 		try {
 			stmt=conn.createStatement();
-			String sql = "select * from ncs";
+			String sql = "select * from member";
 			rs = stmt.executeQuery(sql);
 			list = new ArrayList<Member>();
 			
@@ -58,7 +58,7 @@ public class MemberDao {
 		int resultCnt=0;
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into ncs values (?, ?, ?)";
+		String sql="insert into member values (?, ?, ?, default)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);

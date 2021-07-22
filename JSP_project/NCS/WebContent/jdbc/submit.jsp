@@ -14,7 +14,7 @@
 	<h1>회원관리 프로그램</h1>
 	<hr>
 
-	<form action="submit_getInformation.jsp" method="post">
+	<form action="submitGetInformation.jsp" method="post">
 		<table>
 			<tr>
 				<td>아이디</td>

@@ -10,7 +10,7 @@
 <%
 	//1. 사용자가 입력한 데이터를 받고
 	// 입력데이터의 한글 처리!!!
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String name = request.getParameter("name");
@@ -31,7 +31,7 @@
 %>
 <script>
 	alert("등록되었습니다");
-	location.href = "submit_result.jsp";
+	location.href = "submitResult.jsp";
 </script>
 <%
 	} else {

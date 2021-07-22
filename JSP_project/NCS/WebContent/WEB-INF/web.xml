@@ -3,11 +3,7 @@
   <display-name>FIrst-Web</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
   <servlet>
@@ -15,24 +11,7 @@
   	<servlet-class>jdbc.util.Loader</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
-  
-  <!-- 에러페이지 등록 -->
-  <!-- http 상태 코드로 등록 -->
-  <error-page>
-  	<error-code>404</error-code>
-  	<location>/error/error404.jsp</location>
-  </error-page>
-  
-  <error-page>
-  	<error-code>500</error-code>
-  	<location>/error/error500.jsp</location>
-  </error-page>
-  
-  <!-- 에러 타입으로 등록 -->
-  <error-page>
-  	<exception-type>java.lang.NullPointerException</exception-type>
-  	<location>/error/errorTypeNull.jsp</location>
-  </error-page>
+
   
   
   
