@@ -28,3 +28,7 @@ Service Class(기능 처리),
 Domain(데이터 저장), 
 DAO(데이터 베이스 기능 처리), 
 JSP(응답 표현 view)
+
+
+#입력기능
+form(jsp) -> write(jsp) -> service -> dao -> service -> write(jsp) -> view(jsp)
