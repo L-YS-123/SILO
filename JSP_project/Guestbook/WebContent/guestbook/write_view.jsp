@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +13,20 @@
 </head>
 <body>
 	<h1>
-	
+		<c:if test="${result == 0}">
+			메시지가 입력이 되지 않았습니다. 다시시도해주세요.
+		</c:if>
+		
+		<c:if test="${result eq 1}">
+			메시지가 입력되었습니다.
+		</c:if>
 	</h1>
 	<a href="list.jsp">리스트 보기</a>
 </body>
 </html>
+
+
+
+
+
+

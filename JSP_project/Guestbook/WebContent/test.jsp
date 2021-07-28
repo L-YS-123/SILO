@@ -1,7 +1,7 @@
+<%@page import="guest.jdbc.ConnectionProvider"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@page import="guest.jdbc.ConnectionProvider" %>
-    <%@page import="java.sql.Connection" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +13,9 @@
 </script>
 </head>
 <body>
-<%
-	Connection con = ConnectionProvider.getConnection();
-	out.print(con);
-%>
+	<%
+		Connection con = ConnectionProvider.getConnection();
+		out.print(con);
+	%>
 </body>
 </html>

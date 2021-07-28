@@ -19,37 +19,39 @@ public class WriteMessageService {
 		return service;
 	}
 	
-	
 	// 메시지를 DB에 쓰고 처리된 결과 생성
 	public int writeMessage(MessageRequest requestMessage) {
 		
-		int resultCnt=0;
-		// 트랜젝션 처리를 위해 생성
+		int resultCnt = 0;
+		
+		// 트랜젝션 처리를 위해서 생성
 		Connection conn = null;
 		MessageDao dao = null;
 		
 		try {
 			conn = ConnectionProvider.getConnection();
-			dao = MessageDao.getInstance();
+			dao = MessageDao.getInstance(); //new MessageDao();
 			conn.setAutoCommit(false);
-			// AutoCommit 기본값은 true = 자동커밋
-			// 프로그래머가 JAVA JDBC에서 트랙젝션을 컨트롤 -> conn.setAutoCommit(false);
+			// AutoCommit 의 기본값은 true -> 자동 커밋
+			// 프로그래머가 Java JDBC에서 트랜젝션을 컨트롤 -> conn.setAutoCommit(false);
 			
 			Message message = requestMessage.toMessage();
 			// 데이터 전처리가 필요한 부분은 처리
+			//.........
+			//........
 			
 			resultCnt = dao.writeMessage(conn, message);
 			
-			//트랜젝션 완료
+			// 트랜젝션 완료 
 			conn.commit();
 			
 		} catch (SQLException e) {
-			// 트랜젝션 롤백
+			// 트랜젝션 rollback
 			JdbcUtil.rollback(conn);
 			e.printStackTrace();
 		}
 		
 		return resultCnt;
 	}
-	
+
 }
