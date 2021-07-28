@@ -11,7 +11,7 @@
 </script>
 </head>
 <body>
-
+	
 	<h1>result.jsp 페이지의 응답입니다.</h1>
 
 </body>

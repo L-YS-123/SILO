@@ -1,11 +1,11 @@
-<!-- 디렉티브 영역: @로 시작, 속성을 지정 -->
+<%@ page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	//자바코드 영역
-	java.util.Date now = new java.util.Date();
+	// 스크립트릿 영역
+	java.util.Date now = new Date();
 %>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,6 +20,11 @@
 </head>
 <body>
 	<!-- 날짜와 시간을 출력 -->
-	<%= now %>
+	<h1><%= now %></h1>
 </body>
 </html>
+
+
+
+
+

@@ -69,6 +69,7 @@ public class MemberDao {
 						rs.getString(2), 
 						rs.getString(3), 
 						rs.getString(4),
+						rs.getString(5),
 						rs.getTimestamp(6)));
 			}
 
@@ -85,10 +86,6 @@ public class MemberDao {
 	}
 	
 	
-	
-	
-	
-	
 	public Member selectByIdPw(Connection conn, String id, String pw) {
 		
 		Member member = null;
@@ -96,7 +93,7 @@ public class MemberDao {
 		ResultSet rs = null;
 		
 		String sql = "select * from member where memberid=? and password=?";
-
+		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
@@ -122,9 +119,21 @@ public class MemberDao {
 		}
 		
 		
-		return member;
 		
+		
+		return member;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

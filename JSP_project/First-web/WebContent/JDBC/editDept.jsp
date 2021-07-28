@@ -9,16 +9,23 @@
 	pageEncoding="UTF-8"%>
 <%
 	//1. 사용자가 입력한 데이터를 받고
+
 	// 입력데이터의 한글 처리!!!
 	request.setCharacterEncoding("utf-8");
+
 	String deptno = request.getParameter("deptno");
 	String dname = request.getParameter("dname");
 	String loc = request.getParameter("loc");
+
 	int resultCnt = 0;
+
 	// 2. DB 처리 : insert
+
 	// 데이터베이스 드라이버 로드
+
 	Connection conn = null;
 	DeptDao dao = null;
+
 	try {
 		conn = ConnectionProvider.getConnection();
 		dao = DeptDao.getInstance();
@@ -30,6 +37,7 @@
 	} catch (SQLException e) {
 		e.printStackTrace();
 	}
+
 	if (resultCnt > 0) {
 %>
 <script>
@@ -46,3 +54,9 @@
 <%
 	}
 %>
+
+
+
+
+
+

@@ -10,11 +10,15 @@
 <%
 	// 사용자가 전달하는 deptno 받고 -> 실행 -> 결과
 	String deptno = request.getParameter("deptno");
+
 	// DB 에 있는 데이터를 삭제
 	int resultCnt = 0;
+
 	// 2. DB 처리 : insert
+
 	Connection conn = null;
 	DeptDao dao = DeptDao.getInstance();
+
 	try {
 		conn = ConnectionProvider.getConnection();
 		resultCnt = dao.deleteDept(conn, Integer.parseInt(deptno));
@@ -28,6 +32,7 @@
 	}
 	
 	
+
 	if (resultCnt > 0) {
 %>
 <script>

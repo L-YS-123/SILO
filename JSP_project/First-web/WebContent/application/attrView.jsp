@@ -15,6 +15,7 @@
 
 <%
 	Enumeration e = application.getAttributeNames();
+
 	while(e.hasMoreElements()){
 		String name = (String) e.nextElement();
 		out.println(name + " = " + application.getAttribute(name) +"<br><br>");

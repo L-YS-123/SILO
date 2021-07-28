@@ -16,12 +16,24 @@
 	
 		<select name="select">
 			<option value="0">forward</option>
-			<option value="1">sendRedierct</option>
+			<option value="1">sendRedirect</option>
 		</select>
 		<br>
 		<input type="submit">
 	
 	</form>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
