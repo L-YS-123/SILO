@@ -5,20 +5,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style>
 </style>
 <script>
+
+	$(document).ready(function(){
+		//alert("ready");
+		
+		/* $.get('data.html', function(data){
+			$('body').html(data);
+		}); */
+		
+		$.post('data.html', function(data){
+			$('body').html(data);
+		});
+		
+		
+		
+	});
+
+
+
+
 </script>
 </head>
 <body>
-	<%@ include file="include/header.jsp" %>
-	<%--@ include file="WEB-INF/header.jsp" --%>
-<hr>
-	<%@ include file="include/nav.jsp" %>
-<div id="wrap">
-	<%@ include file="include/news.jsp" %>
-	<%@ include file="include/shopping.jsp" %>
-</div>
+
 
 </body>
 </html>

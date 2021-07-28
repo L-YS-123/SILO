@@ -14,7 +14,7 @@
 	<%@ include file="include/header.jsp" %>
 	<%--@ include file="WEB-INF/header.jsp" --%>
 <hr>
-	<!-- <%@ include file="include/nav.jsp" %> -->
+	<%@ include file="include/nav.jsp" %>
 <div id="wrap">
 	<%@ include file="include/news.jsp" %>
 	<%@ include file="include/shopping.jsp" %>
