@@ -2,6 +2,7 @@ package member.dao;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import member.domain.Member;
@@ -9,31 +10,32 @@ import member.domain.Member;
 public class MemberDao implements Dao {
 	
 	private static int nextId = 0;
-	private Map<String, Member> map = new HashMap<>();
-	// email, Member
+	private Map<String, Member> map = new HashMap();
+	//          email , Member
 
+	public MemberDao() {
+		System.out.println("MemberDao 인스턴스 생성");
+	}
+	
+	
 	@Override
 	public Member selectByEmail(String email) {
-		// TODO Auto-generated method stub
-		return map.get(email); //email=key
+		return map.get(email);
 	}
 
 	@Override
 	public void insert(Member member) {
-		// TODO Auto-generated method stub
 		member.setId(nextId++);
 		map.put(member.getEmail(), member);
 	}
 
 	@Override
 	public void update(Member member) {
-		// TODO Auto-generated method stub
 		map.put(member.getEmail(), member);
 	}
 
 	@Override
-	public Collection<Member> selectAll(Member member) {
-		// TODO Auto-generated method stub
+	public Collection<Member> selectAll() {
 		return map.values();
 	}
 
