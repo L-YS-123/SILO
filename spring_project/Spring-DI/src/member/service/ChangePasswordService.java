@@ -5,7 +5,17 @@ import member.domain.Member;
 
 public class ChangePasswordService {
 	
-	Dao dao;
+	private Dao dao;
+	
+	// dao 주입을 위한  setter
+	public void setDao(Dao dao) {
+		this.dao = dao;
+	}
+	
+	// 기본생성자
+	public ChangePasswordService() {
+		System.out.println("ChangePasswordService()");
+	}
 	
 	public ChangePasswordService(Dao dao) {
 		this.dao = dao;

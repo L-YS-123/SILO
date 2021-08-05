@@ -1,16 +1,16 @@
-INSERT INTO `procject`.`test`
+INSERT INTO `project`.`test`
 (`memo`)
 VALUES
 ('test memo2');
 
-UPDATE `procject`.`test`
+UPDATE `project`.`test`
 SET
-`memo` = 'edit memo'
+`memo` = "edit mDELETE FROM `project`.`test`
+WHERE <{where_expression}>;
+mo"
 WHERE `idx` = 2;
 
-DELETE FROM `procject`.`test`
-WHERE idx=3;
 
-
-
+DELETE FROM project.test
+WHERE idx=2;
 

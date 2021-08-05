@@ -1,45 +1,82 @@
---계정 HR이 보유한 테이블의 리스트들
-select*from tab;
+-- 2021.06.09 
+-- SQL Basic
 
---
-desc tab;
+-- 계정 HR이 보유(권한)한 테이블 객체 리스트
+select * from tab;
 
--- 데이터 조회를 위한 명령 : Select
--- Select {컬럼명,..., *} from 테이블이름 ;
-select * from emp; -- 전체출력
+-- 테이블의 정보를 검색 : 컬럼의 이름, null 유무, 타입, 사이즈
+desc dept;
+desc emp;
 
--- 사원의 사원 번호와 사원 이름을 출력, 번호와 이름의 순서를 임의로 바꿔 출력가능
-select empno, ename, sal from emp; -- 부분출력
 
--- select 컬럼의 산술연산이 가능: (컬럼과 숫자) 연산, (컬럼과 컬럼) 연산
-select empno+sal from emp;
-select empno-sal from emp;
-select empno, ename, sal, sal*12 from emp;
+-- 데이터 조회를 위한 명령 : Select 
+-- Select {컬럼명,..., *} from 테이블 이름 ;
+select * from  emp;
 
-select sal*comm from emp;
+-- 필요한 컬럼을 출력
+-- select 컬럼명, 컬럼명 from 테이블 이름;
+-- 사원의 사원 번호와 사원 이름을 출력
+select empno, sal, deptno
+from emp
+;
 
--- 사원의 이름, 직급, 급여, 커미션, 연봉(급여*12), 연봉(급여*12+커미션)
-select ename, job, sal, comm, sal*12, sal*12+comm from emp;
+-- select 컬럼의 산술연산이 가능 : 컬럼과 숫자의 연산, 컬럼과 커럼간의 연산가능
+-- 사원이름, 월 급여, 연봉계산 결과값 (sal * 12)
+select ename, sal, sal*12 as ysal
+from emp
+;
 
--- (중요!)개선: null 값을 0으로 치환해서 연산 { nvl(null인 컬럼,치환값), as ~~~: 별명 }
-select ename, job, sal, nvl(comm,0), sal*12, sal*12+nvl(comm,0) as bonusIncluded from emp;
+select sal, comm --, sal*comm, sal*12, sal/10, sal-100, sal+1000
+from emp
+;
+
+-- 사원의 이름, 직급, 급여, 커미션, 연봉(급여*12), 연봉(급여*12*커미션)
+select ename, job, sal, comm, sal*12 as ysal1, sal*12+comm as ysal2
+from emp
+;
+
+-- 개선 : null 값을 0으로 치횐해서 연산
+-- nvl(컬럼 이름, 기본값) : 컬럼의 값이 null 일때 기본값으로 치환
+select ename, job, sal, 
+       nvl(comm, 0), sal*12 as ysal1, sal*12+nvl(comm, 0) as ysal2
+from emp
+;
+
 
 -- 컬럼과 문자열을 붙이는 연산 || 이용
--- sql에서 문자열 표현은 -> ' 작은 따옴표 이용해서 처리
--- , 쉼표는 사용하지 않는다.
-select ename || ' is a ' || job from emp;
+-- sql에서 문자열 표현 -> ' 작은 따움표 이용 
+select ename || ' is a ' || job
+from emp
+;
 
--- 결과 리스트에서 중복된 값을 하나씩만 출력: distinct
-select distinct deptno from emp;
+-- 결과 리스트에서 중복된 값을 제거 : distinct
+select deptno
+from emp
+;
 
--- 여러 항목에서 distinct를 이용하여 중복된 값 거르고 출력
--- order by (컬럼) -> 행의 정렬
--- order by (컬럼)에 따라 결과 값이 달라진다
-select distinct deptno, job from emp order by job;
-select distinct deptno, job from emp order by deptno;
+select distinct deptno
+from emp
+;
 
--- 특정 데이터 검색 방법 = where 조건절
--- 3000 이상 급여를 받는 사원의 이름, 직업, 급여
-select ename, job, sal from emp where sal >= 3000;
+select * from dept;
 
-commit;
+select distinct deptno, job
+from emp
+order by job  -- 정렬 : 행의 정렬
+;
+
+select *
+from emp
+;
+
+-- 특정 데이터를 검색하기위해서는 
+-- select ~ from ~ 구문에 where절을 이용
+-- where 뒤에는 조건식이 정의 -> where 컬럼명 비교연산자 값
+-- where sal >= 3000
+-- 사원이름, 사원 번호, 급여 
+select ename, empno, sal
+from emp
+where sal >= 3000
+;
+
+

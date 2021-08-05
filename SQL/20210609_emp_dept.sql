@@ -1,7 +1,12 @@
---주석
+
+--  주석
 -- 2021.06.09
--- emp, dept DDL -> DML
--- Table 생성 -> 테이블에 데이터 저장(insert), 자동 커밋
+
+-- emp, dept DDL -> DML 
+-- Table 생성 -> 테이블에 데이터를 저장(insert)
+
+drop table emp; 
+drop table dept; 
 
 create table dept(                        -- dept table 생성
   deptno number,                          -- 부서번호
@@ -22,13 +27,13 @@ create table emp(                         -- emp table 생성
   constraint pk_emp primary key (empno)   -- empno로 pk설정
 );
 
--- DEPT DML, 커밋 영역
-insert into dept values(10, 'ACCOUNTING', 'NEW YORK'); --행 단위 데이터 입력
+-- DEPT DML
+insert into dept values(10, 'ACCOUNTING', 'NEW YORK');
 insert into dept values(20, 'RESEARCH', 'DALLAS');
 insert into dept values(30, 'SALES', 'CHICAGO');
 insert into dept values(40, 'OPERATIONS', 'BOSTON');
 
--- EMP DML, 커밋 영역
+-- EMP DML
 insert into emp values( 7839, 'KING', 'PRESIDENT', null, to_date('1996-11-17','yyyy-mm-dd'), 5000, null, 10);
 insert into emp values( 7698, 'BLAKE', 'MANAGER', 7839, to_date('1991-1-05','yyyy-mm-dd'), 2850, null, 30);
 insert into emp values( 7782, 'CLARK', 'MANAGER', 7839, to_date('1999-9-06','yyyy-mm-dd'), 2450, null, 10);
@@ -46,6 +51,8 @@ insert into emp values( 7934, 'MILLER', 'CLERK', 7782, to_date('2003-1-23','yyyy
 
 commit;
 
---검색 or 질의 -> Select
-select*from dept;
-select*from emp;
+-- 검색 : 질의 -> Select
+select * from dept;
+select * from emp;
+
+
