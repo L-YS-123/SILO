@@ -8,14 +8,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.bitcamp.op.jdbc.JdbcUtil;
 import com.bitcamp.op.member.domain.Member;
 
 
+
 @Repository
 public class MemberDao {
+	
+	private JdbcTemplate template;
 
 	public int insertMember(Connection conn, Member member) throws SQLException {
 
@@ -127,30 +131,37 @@ public class MemberDao {
 	}
 
 	// ID 중복여부 확인을 위한 id 값으로 검색 -> 개수 반환
-	public int selectById(Connection conn, String memberId) throws SQLException {
+	public int selectById(String memberId) throws SQLException {
 		
-		int cnt = 0;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+//		int cnt = 0;
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//		
+//		String sql = "select count(*) from member where memberid=?";
+//		
+//		try {
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, memberId);
+//			
+//			rs = pstmt.executeQuery();
+//			
+//			if(rs.next()) {
+//				cnt = rs.getInt(1);
+//			}
+//			
+//		} finally {
+//			JdbcUtil.close(rs);
+//			JdbcUtil.close(pstmt);
+//		}
+//		
 		
-		String sql = "select count(*) from member where memberid=?";
 		
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, memberId);
-			
-			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				cnt = rs.getInt(1);
-			}
-			
-		} finally {
-			JdbcUtil.close(rs);
-			JdbcUtil.close(pstmt);
-		}
+//		String sql =  "select * from member where memberid=? and password=?";
+//		int cnt = template.queryForObject(sql, Integer.class, memberId);
+//		return cnt;
 		
-		return cnt;
+		return template.queryForObject("select count(*) from membert where memberid=?", Integer.class, memberId);
+		// template.queryForObject는 integer, String, 객체 형태로 반환 할 수 있다
 	}
 	
 	
