@@ -30,7 +30,12 @@ public class LoginController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String login(@RequestParam("memberid") String memberid, @RequestParam("password") String password, @RequestParam(value = "redirectUri", required = false) String redirectUri, @RequestParam(value = "reid", required = false) String reid, HttpSession session, HttpServletResponse response, HttpServletRequest request, Model model) {
+	public String login(@RequestParam("memberid") String memberid, 
+			@RequestParam("password") String password, 
+			@RequestParam(value = "redirectUri", required = false) String redirectUri, 
+			@RequestParam(value = "reid", required = false) String reid, 
+			HttpSession session, HttpServletResponse response, HttpServletRequest request, 
+			Model model) {
 		
 		// 사용자가 입력한 id, pw 서비스에 전달해서 로그인 처리
 		boolean loginChk = loginService.login(memberid, password, reid, session, response);
@@ -38,8 +43,12 @@ public class LoginController {
 		
 		String view = "member/login";
 		
-		if(chkURI(redirectUri) && loginChk)
-		
+		if(chkURI(redirectUri) && loginChk) {
+			
+			redirectUri = redirectUri.substring(request.getContextPath().length());
+			view = redirectUri;
+		}
+		return view;
 	}
 	
 	private boolean chkURI(String uri) {
