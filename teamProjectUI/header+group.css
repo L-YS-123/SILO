@@ -120,8 +120,9 @@
     }
     #aside2 {
         width: 200px;
-        height: 400px;
-        margin-top: 100px;
+        height: 350px;
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
     #aside2_table {
         margin-left: auto;
@@ -161,10 +162,12 @@
 
     .tab-content.current {
         display: inherit;
+        
     }
 
     .tab-p {
         min-width: 900px;
+        
     }
 
     .thead1 {
@@ -186,10 +189,34 @@
         padding: 10px;
         border-collapse:collapse;
         border-spacing: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    th {
+        font-size: 1em;
     }
 
     #group_link {
         font-size: 1.5em;
         font-weight: bold;
     }
+
+    #paging {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 1.1em;
+        overflow: hidden;
+    }
+
+    #category {
+        text-align: center;
+    }
+
+    #view {
+        text-align: center;
+    }
   
+    #like {
+        text-align: center;
+    }
