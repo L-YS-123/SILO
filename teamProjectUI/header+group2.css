@@ -1,0 +1,144 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+
+
+    header {
+        position: relative;
+        z-index: 20;
+        min-width: 980px;
+        width: 100%;
+        height: 140px;
+        background-color: rgb(66, 133, 244);
+        text-align: center;
+    }
+
+    .MultiBar {
+        display: inline-block;
+        height: 30px;
+        width: 100%;
+        max-width: 1280px;
+        padding: 12px 0px 5px;
+    }
+
+    .area_gnb {
+        font-size: 12px;
+        width: 500px;
+        height: 30px;
+        float: right;
+        color: white;
+    }
+
+    .area_gnb>li {
+        float: right;
+        width: 75px;
+    }
+
+    .container {
+        display: inline-block;
+        height: 93px;
+        width: 100%;
+        max-width: 1280px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        width: 180px;
+        margin-left: -90px;
+    }
+
+
+    .main_naviwrap {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        height: 80px;
+        margin-top: -98px;
+        padding-bottom: 10px;
+    }
+
+    .main_nav {
+        padding-top: 45px;
+    }
+
+    .main_nav>.left_ul {
+        float: left;
+        overflow: hidden;
+    }
+
+    .main_nav>.right_ul {
+        float: right;
+        overflow: hidden;
+    }
+
+    .main_nav>ul>li {
+        color: white;
+        width: 85px;
+        float: left;
+    }
+
+
+    .main_div {
+        border: 1px solid #aaa;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .div {
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        width: 600px;
+        height: 825px;
+        margin-top: 60px;
+        background-color: rgb(52, 168, 83);
+    }
+    #div1 {
+        float: left;
+    }
+    #div2 {
+        float: right;
+    }
+
+    .secondary_div1 {
+        background-color: white;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        width: 500px;
+        height: 240px;
+        margin: 25px 50px;   
+        text-align: center;
+        line-height: 240px;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .secondary_div2 {
+        background-color: white;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        width: 500px;
+        height: 240px;
+        margin: 25px 50px;   
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        
+    }
