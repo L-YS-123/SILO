@@ -114,9 +114,11 @@
     }
     #div1 {
         float: left;
+        box-shadow: 5px 5px 5px 3px gray;
     }
     #div2 {
         float: right;
+        box-shadow: 5px 5px 5px 3px gray;
     }
 
     .secondary_div1 {
@@ -133,6 +135,7 @@
         font-size: 2em;
         font-weight: bold;
         overflow: hidden;
+        
     }
     .secondary_div2 {
         background-color: white;
