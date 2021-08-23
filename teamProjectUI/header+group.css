@@ -119,6 +119,7 @@
         font-size: 1.5em;
         font-weight: bold;
         box-shadow: 5px 5px 5px  grey;
+        cursor: pointer;
     }
     #aside2 {
         width: 200px;
@@ -200,6 +201,10 @@
         font-size: 1em;
     }
 
+    td {
+        cursor: pointer;
+    }
+
     #group_link {
         font-size: 1.5em;
         font-weight: bold;
@@ -222,4 +227,26 @@
   
     #like {
         text-align: center;
+    }
+
+    #search_var {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    #form_select_category {
+        padding: 5px;
+    }
+
+    #form_search {
+        padding: 5px;
+        width: 300px;
+    }
+
+    #form_button {
+        width: 60px;
+        height: 30px;
+        background-color:rgb(52, 168, 83);
+        color: white;
+        border: none;
     }
