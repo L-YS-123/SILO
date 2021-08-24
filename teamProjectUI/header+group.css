@@ -106,8 +106,8 @@
         border-radius: 5px;
         float: right;
         text-align: center;
-        
-        color: black
+        color: black;
+        overflow: hidden;
         
         
     }
@@ -120,14 +120,20 @@
         font-weight: bold;
         box-shadow: 5px 5px 5px 5px grey;
         cursor: pointer;
+       
     }
+
     #aside2 {
-        width: 200px;
-        height: 350px;
+       width: 200px;
+        height: 250px;
         margin-top: 50px;
-        margin-bottom: 100px;
-        box-shadow: 5px 5px 5px 5px gray;
+        line-height: 250px;
+        font-size: 1.5em;
+        font-weight: bold;
+        box-shadow: 5px 5px 5px 5px grey;
+        cursor: pointer;
     }
+
     #aside2_table {
         margin-left: auto;
         margin-right: auto;
@@ -221,17 +227,27 @@
         text-align: center;
     }
 
-    #view {
+    #nickname {
         text-align: center;
     }
   
-    #like {
+    #startDate {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #endDate {
+        text-align: center;
+    }
+
+    #regDate {
         text-align: center;
     }
 
     #search_var {
         text-align: center;
         padding-top: 10px;
+        margin-bottom: 50px;
     }
 
     #form_select_category {
@@ -249,4 +265,15 @@
         background-color:rgb(52, 168, 83);
         color: white;
         border: none;
+    }
+
+    .no_overflow {
+        width: 200px;
+        height: 230px;
+        line-height: 100%;
+    }
+
+    .button200px {
+        border: hidden;
+        cursor: pointer;
     }
