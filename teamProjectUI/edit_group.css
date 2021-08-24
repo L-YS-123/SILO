@@ -114,6 +114,7 @@ header {
     height: 500px;
     float: left;
     word-break: break-all;
+    padding: 10px;
 }
 
 #div2 {
@@ -121,6 +122,7 @@ header {
     height: 500px;
     float: right;
     word-break: break-all;
+    padding: 10px;
 }
 
 #div3 {
@@ -128,3 +130,60 @@ header {
     width: 1280px;
     height: 300px;
 }
+
+
+
+#exampleFormControlTextarea1 {
+    height: 170px;
+}
+
+#confirm {
+    float: right;
+}
+
+#participant_list {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 360px;
+    height: 50px;
+    margin: 10px 10px auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    
+}
+
+#accept {
+    float: right;
+    margin-right: 10px;
+}
+#decline {
+    float: right;
+    margin-right: 10px;
+}
+
+#previous_or_next {
+    text-align: center;
+}
+
+#number {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#count_participant {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#participant_list_accepted {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 360px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
