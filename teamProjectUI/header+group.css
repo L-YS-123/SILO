@@ -102,12 +102,12 @@
     }
 
     aside {
-        border: 1px solid rgb(52, 168, 83);
-        border-radius: 20px;
+        
+        border-radius: 5px;
         float: right;
         text-align: center;
-        background-color: rgb(52, 168, 83);
-        color: white;
+        
+        color: black
         
         
     }
@@ -118,7 +118,7 @@
         line-height: 250px;
         font-size: 1.5em;
         font-weight: bold;
-        box-shadow: 5px 5px 5px  grey;
+        box-shadow: 5px 5px 5px 5px grey;
         cursor: pointer;
     }
     #aside2 {
@@ -126,7 +126,7 @@
         height: 350px;
         margin-top: 50px;
         margin-bottom: 100px;
-        box-shadow: 5px 5px 5px  gray;
+        box-shadow: 5px 5px 5px 5px gray;
     }
     #aside2_table {
         margin-left: auto;

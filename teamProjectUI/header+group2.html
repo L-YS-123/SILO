@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="header+group2.css">
+
+    
+    <script>
+        function popUp() {
+            window.open("popUp.html",".button2","width=400, height=200, left=1200, top=400");
+        }
+    </script>
+
 </head>
 
 
@@ -55,8 +64,8 @@
                 <br><br>
                 내 모임(게임명)1
                 <br>
-                <input type="button" value="게시물관리" class="button">
-                <input type="button" value="인원관리" class="button">
+                <input type="button" value="게시물관리" class="button" onclick="location.href = '#'">
+                <input type="button" value="인원관리" class="button" onclick="location.href = '#'">
             </div>
             <div id="div1_2" class="secondary_div1">
                 <br><br>
@@ -75,7 +84,7 @@
         </div>
 
         <div id="div2" class="div">
-             <div id="div2_1" class="secondary_div2">
+            <div id="div2_1" class="secondary_div2">
                 <br>
                 참여한 모임(게임명)1
                 <br>
@@ -84,9 +93,9 @@
                 <br>
                 현재 인원:
                 <br>
-                <input type="button" value="탈퇴" class="button2">
-             </div>
-             <div id="div2_2" class="secondary_div2">
+                <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+            </div>
+            <div id="div2_2" class="secondary_div2">
                 <br>
                 참여한 모임(게임명)2
                 <br>
@@ -95,9 +104,9 @@
                 <br>
                 현재 인원:
                 <br>
-                <input type="button" value="탈퇴" class="button2">
-             </div>
-             <div id="div2_3" class="secondary_div2">
+                <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+            </div>
+            <div id="div2_3" class="secondary_div2">
                 <br>
                 참여한 모임(게임명)3
                 <br>
@@ -106,13 +115,19 @@
                 <br>
                 현재 인원:
                 <br>
-                <input type="button" value="탈퇴" class="button2">
-             </div>
+                <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+            </div>
         </div>
 
     </div>
 
-    
+
+
+
+
+
+
 
 </body>
+
 </html>
