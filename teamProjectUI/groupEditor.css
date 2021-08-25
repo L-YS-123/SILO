@@ -7,15 +7,12 @@ ul {
     list-style: none;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+#wrap {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
 }
-
-ul {
-    list-style: none;
-}
-
 
 
 header {
@@ -107,6 +104,7 @@ header {
     border-radius: 5px;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: white;
 }
 
 #div1 {

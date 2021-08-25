@@ -62,152 +62,155 @@
     </header>
 
 
-    <div class="main_div">
+    <div id="wrap">
+        <div class="main_div">
 
-        <form action="">
-            <div id="div1" class="div">
-                <!-- 히스토리백 -->
+            <form action="">
+                <div id="div1" class="div">
+                    <!-- 히스토리백 -->
 
-                <!-- 제목 -->
-                <div class="form-group">
-                    <label for="formGroupExampleInput">제목</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
+                    <!-- 제목 -->
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">제목</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput">
+                    </div>
+                    <!-- 내용 -->
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">내용</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <!-- 파일선택 -->
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <!-- 확인 -->
+                    <button type="submit" class="btn btn-primary" id="confirm">확인</button>
                 </div>
-                <!-- 내용 -->
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">내용</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <!-- 파일선택 -->
-                <div class="form-group">
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-                <!-- 확인 -->
-                <button type="submit" class="btn btn-primary" id="confirm">확인</button>
-            </div>
-        </form>
+            </form>
 
-        <form action="">
-            <div id="div2" class="div">
-                <h4>모임 참가 희망자</h4>
+            <form action="">
+                <div id="div2" class="div">
+                    <h4>모임 참가 희망자</h4>
+                    <hr>
+                    <!-- 참가 희망자 리스트 -->
+                    <ul>
+                        <li>
+                            <div id="participant_list">
+                                <!-- 닉네임 들어갈 자리 -->
+                                닉네임닉네임닉네임닉네임1
+                                <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
+                                <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="participant_list">
+                                닉네임닉네임닉네임닉네임2
+                                <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
+                                <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="participant_list">
+                                닉네임닉네임닉네임닉네임3
+                                <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
+                                <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="participant_list">
+                                닉네임닉네임닉네임닉네임4
+                                <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
+                                <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="participant_list">
+                                닉네임닉네임닉네임닉네임5
+                                <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
+                                <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 참가 희망자 리스트 끝! -->
+
+                    <!-- 숫자 목차 -->
+                    <div id="number">1/2/3/4/5</div>
+
+                    <!-- 이전, 다음 버튼 -->
+                    <div id="previous_or_next">
+                        <button type="button" class="btn btn-outline-dark">이전</button>
+                        <button type="button" class="btn btn-outline-dark">다음</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+
+        <div class="main_div">
+            <div id="div3" class="div">
+                <!-- 참가 인원 카운트 시작 -->
+                <h4 id="count_participant">참여 인원 0/10</h4>
+
                 <hr>
-                <!-- 참가 희망자 리스트 -->
-                <ul>
-                    <li>
-                        <div id="participant_list">
-                            <!-- 닉네임 들어갈 자리 -->
-                            닉네임닉네임닉네임닉네임1
-                            <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
-                            <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="participant_list">
-                            닉네임닉네임닉네임닉네임2
-                            <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
-                            <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="participant_list">
-                            닉네임닉네임닉네임닉네임3
-                            <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
-                            <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="participant_list">
-                            닉네임닉네임닉네임닉네임4
-                            <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
-                            <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="participant_list">
-                            닉네임닉네임닉네임닉네임5
-                            <button class="btn btn-danger btn-sm" type="submit" id="decline">거절</button>
-                            <button class="btn btn-success btn-sm" type="submit" id="accept">수락</button>
-                        </div>
-                    </li>
-                </ul>
-                <!-- 참가 희망자 리스트 끝! -->
 
-                <!-- 숫자 목차 -->
-                <div id="number">1/2/3/4/5</div>
-
-                <!-- 이전, 다음 버튼 -->
-                <div id="previous_or_next">
-                    <button type="button" class="btn btn-outline-dark">이전</button>
-                    <button type="button" class="btn btn-outline-dark">다음</button>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임1
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
                 </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임2
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임3
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임4
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임5
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임6
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임7
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임8
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임9
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임10
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                <div id="participant_list_accepted">
+                    <!-- 닉네임 들어갈 자리 -->
+                    닉네임닉네임닉네임닉네임11
+                    <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
+                </div>
+                
+                
             </div>
-        </form>
-    </div>
-
-    <div class="main_div">
-        <div id="div3" class="div">
-            <!-- 참가 인원 카운트 시작 -->
-            <h4 id="count_participant">참여 인원 0/10</h4>
-
-            <hr>
-
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임1
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임2
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임3
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임4
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임5
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임6
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임7
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임8
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임9
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임10
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            <div id="participant_list_accepted">
-                <!-- 닉네임 들어갈 자리 -->
-                닉네임닉네임닉네임닉네임11
-                <button class="btn btn-danger btn-sm" type="submit" id="decline">추방</button>
-            </div>
-            
-            
         </div>
     </div>
 

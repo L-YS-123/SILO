@@ -30,11 +30,11 @@
     <script>
         $(document).ready(function () {
 
-            $("#aside1, #aside2").hover(function () {
-                $(this).css("background-color", "rgb(66, 133, 244)").css("color", "white");
-            }, function () {
-                $(this).css("background-color", "white").css("color", "black");
-            });
+            // $("#aside1, #aside2").hover(function () {
+            //     $(this).css("background-color", "rgb(66, 133, 244)").css("color", "white");
+            // }, function () {
+            //     $(this).css("background-color", "white").css("color", "black");
+            // });
 
             $("#aside1").click(function () {
                 location.href = 'groupManagement.html';
@@ -59,6 +59,7 @@
 
 
 <body>
+    
     <header>
         <div class="MultiBar">
             <ul class="area_gnb">
@@ -97,764 +98,761 @@
 
 
 
-
-    <div class="main_div">
-        <section>
-            <br>
-            <br>
-
-            <br>
-            <br>
-
-            <div class="container">
-                <!-- 탭 메뉴 상단 시작 -->
-                <ul class="tabs">
-                    <li class="tab-link current" data-tab="tab-1">전체</li>
-                    <li class="tab-link" data-tab="tab-2">공지</li>
-                    <li class="tab-link" data-tab="tab-3">정보</li>
-                    <li class="tab-link" data-tab="tab-4">지역</li>
-                    <li class="tab-link" data-tab="tab-5">질문</li>
-
-                </ul>
-                <!-- 탭 메뉴 상단 끝 -->
-
-
-                <!-- 탭 메뉴 내용 시작 -->
-                <div id="tab-1" class="tab-content current">
-                    <!-- <h1>탭 메뉴 1 내용입니다.</h1> -->
-
-                    <p class="tab-p">
-
-                    <table>
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:400px">
-                            <col style="width:140px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>카테고리</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>진행일</th>
-                                <th>마감일</th>
-                                <th>작성날짜</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <div id="paging">
-                        1/2/3/4/5
-                    </div>
-
-                    <form id="search_var" method="POST">
-                        <select name="select_category" id="form_select_category">
-                            <option value="announce">공지</option>
-                            <option value="information">정보</option>
-                            <option value="location">지역</option>
-                            <option value="qna">질문</option>
-                            <option value="extra">기타</option>
-                            <option value="chat">잡담</option>
-                        </select>
-                        <input type="text" name="search" id="form_search">
-                        <button type="submit" name="click" id="form_button">
-                            검색
-                        </button>
-                    </form>
-
-                    </p>
-                </div>
-                <!-- 탭 메뉴 내용 끝 -->
-
-
-
-
-
-                <!-- 탭 메뉴 내용 시작 -->
-                <div id="tab-2" class="tab-content">
-                    <!-- <h1>탭 메뉴 2 내용입니다.</h1> -->
-
-                    <p class="tab-p">
-
-                    <table>
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:400px">
-                            <col style="width:140px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>카테고리</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>진행일</th>
-                                <th>마감일</th>
-                                <th>작성날짜</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다2</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <div id="paging">
-                        1/2/3/4/5
-                    </div>
-
-                    <form id="search_var" method="POST">
-                        <select name="select_category" id="form_select_category">
-                            <option value="announce">공지</option>
-                            <option value="information">정보</option>
-                            <option value="location">지역</option>
-                            <option value="qna">질문</option>
-                            <option value="extra">기타</option>
-                            <option value="chat">잡담</option>
-                        </select>
-                        <input type="text" name="search" id="form_search">
-                        <button type="submit" name="click" id="form_button">
-                            검색
-                        </button>
-                    </form>
-
-                    </p>
-                </div>
-                <!-- 탭 메뉴 내용 끝 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- 탭 메뉴 내용 시작 -->
-                <div id="tab-3" class="tab-content">
-                    <!-- <h1>탭 메뉴 3 내용입니다.</h1> -->
-
-                    <p class="tab-p">
-
-                    <table>
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:400px">
-                            <col style="width:140px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>카테고리</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>진행일</th>
-                                <th>마감일</th>
-                                <th>작성날짜</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다3</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <div id="paging">
-                        1/2/3/4/5
-                    </div>
-
-                    <form id="search_var" method="POST">
-                        <select name="select_category" id="form_select_category">
-                            <option value="announce">공지</option>
-                            <option value="information">정보</option>
-                            <option value="location">지역</option>
-                            <option value="qna">질문</option>
-                            <option value="extra">기타</option>
-                            <option value="chat">잡담</option>
-                        </select>
-                        <input type="text" name="search" id="form_search">
-                        <button type="submit" name="click" id="form_button">
-                            검색
-                        </button>
-                    </form>
-
-                    </p>
-                </div>
-                <!-- 탭 메뉴 내용 끝 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- 탭 메뉴 내용 시작 -->
-                <div id="tab-4" class="tab-content">
-                    <!-- <h1>탭 메뉴 4 내용입니다.</h1> -->
-
-                    <p class="tab-p">
-
-                    <table>
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:400px">
-                            <col style="width:140px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>카테고리</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>진행일</th>
-                                <th>마감일</th>
-                                <th>작성날짜</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다4</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <div id="paging">
-                        1/2/3/4/5
-                    </div>
-
-                    <form id="search_var" method="POST">
-                        <select name="select_category" id="form_select_category">
-                            <option value="announce">공지</option>
-                            <option value="information">정보</option>
-                            <option value="location">지역</option>
-                            <option value="qna">질문</option>
-                            <option value="extra">기타</option>
-                            <option value="chat">잡담</option>
-                        </select>
-                        <input type="text" name="search" id="form_search">
-                        <button type="submit" name="click" id="form_button">
-                            검색
-                        </button>
-                    </form>
-
-                    </p>
-                </div>
-                <!-- 탭 메뉴 내용 끝 -->
-
-
-
-
-
-
-
-
-
-                <!-- 탭 메뉴 내용 시작 -->
-                <div id="tab-5" class="tab-content">
-                    <!-- <h1>탭 메뉴 5 내용입니다.</h1> -->
-
-                    <p class="tab-p">
-
-                    <table>
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:400px">
-                            <col style="width:140px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                            <col style="width:120px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>카테고리</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>진행일</th>
-                                <th>마감일</th>
-                                <th>작성날짜</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다5</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-                            <tr>
-                                <td id="category">[서울]</td>
-                                <td>제목입니다</td>
-                                <td id="nickname">작성자</td>
-                                <td id="startDate">2021-08-21</td>
-                                <td id="endDate">2021-08-24</td>
-                                <td id="regdate">2021-08-15</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <div id="paging">
-                        1/2/3/4/5
-                    </div>
-
-                    <form id="search_var" method="POST">
-                        <select name="select_category" id="form_select_category">
-                            <option value="announce">공지</option>
-                            <option value="information">정보</option>
-                            <option value="location">지역</option>
-                            <option value="qna">질문</option>
-                            <option value="extra">기타</option>
-                            <option value="chat">잡담</option>
-                        </select>
-                        <input type="text" name="search" id="form_search">
-                        <button type="submit" name="click" id="form_button">
-                            검색
-                        </button>
-                    </form>
-
-                    </p>
-                </div>
-                <!-- 탭 메뉴 내용 끝 -->
-
-
-
-
-
-            </div>
-        </section>
-
-
-
-
-
-
-
-
-
-        <aside id="aside1">
-            <div class="no_overflow">
-                <button class="button200px"><img src="images/management.PNG" width="200px" height="180px"></button>
+    <div id="wrap">
+        <div class="main_div">
+            <section>
                 <br>
                 <br>
-                모임 관리
-            </div>
-        </aside>
 
-        <aside id="aside2">
-            <div class="no_overflow">
-                <button class="button200px"><img src="images/people.PNG" width="200px" height="180px"></button>
                 <br>
                 <br>
-                모임 등록
-            </div>
-        </aside>
 
+                <div class="container">
+                    <!-- 탭 메뉴 상단 시작 -->
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">전체</li>
+                        <li class="tab-link" data-tab="tab-2">공지</li>
+                        <li class="tab-link" data-tab="tab-3">정보</li>
+                        <li class="tab-link" data-tab="tab-4">지역</li>
+                        <li class="tab-link" data-tab="tab-5">질문</li>
+
+                    </ul>
+                    <!-- 탭 메뉴 상단 끝 -->
+
+
+                    <!-- 탭 메뉴 내용 시작 -->
+                    <div id="tab-1" class="tab-content current">
+                        <!-- <h1>탭 메뉴 1 내용입니다.</h1> -->
+
+                        <p class="tab-p">
+
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col style="width:400px">
+                                <col style="width:140px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>진행일</th>
+                                    <th>마감일</th>
+                                    <th>작성날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div id="paging">
+                            1/2/3/4/5
+                        </div>
+
+                        <form id="search_var" method="POST">
+                            <select name="select_category" id="form_select_category">
+                                <option value="announce">공지</option>
+                                <option value="information">정보</option>
+                                <option value="location">지역</option>
+                                <option value="qna">질문</option>
+                                <option value="extra">기타</option>
+                                <option value="chat">잡담</option>
+                            </select>
+                            <input type="text" name="search" id="form_search">
+                            <button type="submit" name="click" id="form_button">
+                                검색
+                            </button>
+                        </form>
+
+                        </p>
+                    </div>
+                    <!-- 탭 메뉴 내용 끝 -->
+
+
+
+
+
+                    <!-- 탭 메뉴 내용 시작 -->
+                    <div id="tab-2" class="tab-content">
+                        <!-- <h1>탭 메뉴 2 내용입니다.</h1> -->
+
+                        <p class="tab-p">
+
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col style="width:400px">
+                                <col style="width:140px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>진행일</th>
+                                    <th>마감일</th>
+                                    <th>작성날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다2</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div id="paging">
+                            1/2/3/4/5
+                        </div>
+
+                        <form id="search_var" method="POST">
+                            <select name="select_category" id="form_select_category">
+                                <option value="announce">공지</option>
+                                <option value="information">정보</option>
+                                <option value="location">지역</option>
+                                <option value="qna">질문</option>
+                                <option value="extra">기타</option>
+                                <option value="chat">잡담</option>
+                            </select>
+                            <input type="text" name="search" id="form_search">
+                            <button type="submit" name="click" id="form_button">
+                                검색
+                            </button>
+                        </form>
+
+                        </p>
+                    </div>
+                    <!-- 탭 메뉴 내용 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- 탭 메뉴 내용 시작 -->
+                    <div id="tab-3" class="tab-content">
+                        <!-- <h1>탭 메뉴 3 내용입니다.</h1> -->
+
+                        <p class="tab-p">
+
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col style="width:400px">
+                                <col style="width:140px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>진행일</th>
+                                    <th>마감일</th>
+                                    <th>작성날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다3</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div id="paging">
+                            1/2/3/4/5
+                        </div>
+
+                        <form id="search_var" method="POST">
+                            <select name="select_category" id="form_select_category">
+                                <option value="announce">공지</option>
+                                <option value="information">정보</option>
+                                <option value="location">지역</option>
+                                <option value="qna">질문</option>
+                                <option value="extra">기타</option>
+                                <option value="chat">잡담</option>
+                            </select>
+                            <input type="text" name="search" id="form_search">
+                            <button type="submit" name="click" id="form_button">
+                                검색
+                            </button>
+                        </form>
+
+                        </p>
+                    </div>
+                    <!-- 탭 메뉴 내용 끝 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- 탭 메뉴 내용 시작 -->
+                    <div id="tab-4" class="tab-content">
+                        <!-- <h1>탭 메뉴 4 내용입니다.</h1> -->
+
+                        <p class="tab-p">
+
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col style="width:400px">
+                                <col style="width:140px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>진행일</th>
+                                    <th>마감일</th>
+                                    <th>작성날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다4</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div id="paging">
+                            1/2/3/4/5
+                        </div>
+
+                        <form id="search_var" method="POST">
+                            <select name="select_category" id="form_select_category">
+                                <option value="announce">공지</option>
+                                <option value="information">정보</option>
+                                <option value="location">지역</option>
+                                <option value="qna">질문</option>
+                                <option value="extra">기타</option>
+                                <option value="chat">잡담</option>
+                            </select>
+                            <input type="text" name="search" id="form_search">
+                            <button type="submit" name="click" id="form_button">
+                                검색
+                            </button>
+                        </form>
+
+                        </p>
+                    </div>
+                    <!-- 탭 메뉴 내용 끝 -->
+
+
+
+
+
+
+
+
+
+                    <!-- 탭 메뉴 내용 시작 -->
+                    <div id="tab-5" class="tab-content">
+                        <!-- <h1>탭 메뉴 5 내용입니다.</h1> -->
+
+                        <p class="tab-p">
+
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col style="width:400px">
+                                <col style="width:140px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                                <col style="width:120px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>진행일</th>
+                                    <th>마감일</th>
+                                    <th>작성날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다5</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td id="category">[서울]</td>
+                                    <td>제목입니다</td>
+                                    <td id="nickname">작성자</td>
+                                    <td id="startDate">2021-08-21</td>
+                                    <td id="endDate">2021-08-24</td>
+                                    <td id="regdate">2021-08-15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <div id="paging">
+                            1/2/3/4/5
+                        </div>
+
+                        <form id="search_var" method="POST">
+                            <select name="select_category" id="form_select_category">
+                                <option value="announce">공지</option>
+                                <option value="information">정보</option>
+                                <option value="location">지역</option>
+                                <option value="qna">질문</option>
+                                <option value="extra">기타</option>
+                                <option value="chat">잡담</option>
+                            </select>
+                            <input type="text" name="search" id="form_search">
+                            <button type="submit" name="click" id="form_button">
+                                검색
+                            </button>
+                        </form>
+
+                        </p>
+                    </div>
+                    <!-- 탭 메뉴 내용 끝 -->
+
+
+
+
+
+                </div>
+            </section>
+
+
+
+
+            <aside id="aside1">
+                <div class="no_overflow">
+                    <button class="button200px"><img src="images/management.PNG" width="200px" height="180px"></button>
+                    <br>
+                    <br>
+                    모임 관리
+                    
+                </div>
+            </aside>
+
+            <aside id="aside2">
+                <div class="no_overflow">
+                    <button class="button200px"><img src="images/people.PNG" width="200px" height="180px"></button>
+                    <br>
+                    <br>
+                    모임 등록
+                </div>
+            </aside>
+
+        </div>
     </div>
 
 
@@ -901,7 +899,7 @@
 
 
 
-
+    </div>
 </body>
 
 </html>
