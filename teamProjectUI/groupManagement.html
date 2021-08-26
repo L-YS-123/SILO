@@ -11,8 +11,27 @@
     
     <script>
         // 탈퇴 팝업창
-        function popUp() {
-            document.getElementById('btn_exit_popUp').style.display = "block";
+        function popUp1() {
+            document.getElementById('btn_exit_popUp1').style.display = "block";
+        }
+        function popUp2() {
+            document.getElementById('btn_exit_popUp2').style.display = "block";
+        }
+
+        // 탈퇴 - 미완성
+        function btn_exit1() {
+
+        }
+        function btn_exit2() {
+
+        }
+
+        // 팝업창 닫기
+        function btn_close1() {
+            document.getElementById('btn_exit_popUp1').style.display = "none";
+        }
+        function btn_close2() {
+            document.getElementById('btn_exit_popUp2').style.display = "none";
         }
 
 
@@ -68,21 +87,21 @@
                     내 모임(게임명)1
                     <br>
                     <input type="button" value="게시물관리" class="button" onclick="location.href = 'groupEditor.html'">
-                    <input type="button" value="탈퇴" class="button" onclick="location.href = '#'">
+                    <input type="button" value="탈퇴" class="button" onclick="popUp1()">
                 </div>
                 <div id="div1_2" class="secondary_div1">
                     <br><br>
                     내 모임(게임명)2
                     <br>
                     <input type="button" value="게시물관리" class="button">
-                    <input type="button" value="탈퇴" class="button">
+                    <input type="button" value="탈퇴" class="button" onclick="popUp1()">
                 </div>
                 <div id="div1_3" class="secondary_div1">
                     <br><br>
                     내 모임(게임명)3
                     <br>
                     <input type="button" value="게시물관리" class="button">
-                    <input type="button" value="탈퇴" class="button">
+                    <input type="button" value="탈퇴" class="button" onclick="popUp1()">
                 </div>
             </div>
 
@@ -96,7 +115,7 @@
                     <br>
                     현재 인원:
                     <br>
-                    <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+                    <input type="button" value="탈퇴" class="button2" onclick="popUp2()">
                 </div>
                 <div id="div2_2" class="secondary_div2">
                     <br>
@@ -107,7 +126,7 @@
                     <br>
                     현재 인원:
                     <br>
-                    <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+                    <input type="button" value="탈퇴" class="button2" onclick="popUp2()">
                 </div>
                 <div id="div2_3" class="secondary_div2">
                     <br>
@@ -118,7 +137,7 @@
                     <br>
                     현재 인원:
                     <br>
-                    <input type="button" value="탈퇴" class="button2" onclick="popUp()">
+                    <input type="button" value="탈퇴" class="button2" onclick="popUp2()">
                 </div>
             </div>
 
@@ -126,11 +145,16 @@
     </div>
 
 
-
-    <div id="btn_exit_popUp">
+    <!-- 탈퇴버튼 -->
+    <div id="btn_exit_popUp1">
         <h1>정말 탈퇴하시겠습니까?</h1>
-        <input type="button" value="예" id="btn_exit" class="btn_shape">
-        <input type="button" value="아니오" id="btn_close" class="btn_shape">
+        <input type="button" value="예" id="btn_exit" class="btn_shape" onclick="btn_exit1()">
+        <input type="button" value="아니오" id="btn_close" class="btn_shape" onclick="btn_close1()">
+    </div>
+    <div id="btn_exit_popUp2">
+        <h1>정말 탈퇴하시겠습니까?</h1>
+        <input type="button" value="예" id="btn_exit" class="btn_shape" onclick="btn_exit2()">
+        <input type="button" value="아니오" id="btn_close" class="btn_shape" onclick="btn_close2()">
     </div>
 
 

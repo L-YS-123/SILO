@@ -180,7 +180,7 @@
         cursor: pointer;
     }
 
-    #btn_exit_popUp {
+    #btn_exit_popUp1 {
         display: none;
         border: 1px solid #aaa;
         border-radius: 5px;
@@ -190,8 +190,23 @@
         width: 400px;
         height: 120px;
         position: absolute;
-        top: 400px;
-        left: 700px;
+        top: 500px;
+        left: 400px;
+        z-index: 1;
+    }
+
+    #btn_exit_popUp2 {
+        display: none;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        background-color: white;
+        text-align: center;
+        padding: 30px;
+        width: 400px;
+        height: 120px;
+        position: absolute;
+        top: 500px;
+        left: 1000px;
         z-index: 1;
     }
 
@@ -203,6 +218,8 @@
         height: 50px;
         font-size: 1.5em;
         margin-top: 20px;
+
+        cursor: pointer;
     }
 
     #btn_exit {
