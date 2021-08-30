@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contents</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js" 
+integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" 
+crossorigin="anonymous">
+</script>    
+</head>
+<style>
+    /* header start */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    div{
+        display: block;
+    }
+    ul {
+        list-style: none;
+    }
+    header {
+        position: relative;
+        z-index: 20;
+        min-width: 980px;
+        width: 100%;
+        height: 140px;
+        background-color: rgb(66, 133, 244);
+        text-align: center;
+    }
+    .MultiBar {
+        display: inline-block;
+        height: 30px;
+        width: 100%;
+        max-width: 1280px;
+        padding: 12px 0px 5px;
+    } 
+
+    .area_gnb {
+        font-size: 12px;
+        width: 500px;
+        height: 30px;
+        float: right;
+        color: white;
+    }
+
+    .area_gnb>li {
+        float: right;
+        width: 75px;
+    }
+
+    .container {
+        display: inline-block;
+        height: 93px;
+        width: 100%;
+        max-width: 1280px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        width: 180px;
+        margin-left: -90px;
+    }
+
+    .main_naviwrap {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        height: 80px;
+        margin-top: -98px;
+        padding-bottom: 10px;
+    }
+    .main_nav {
+        padding-top: 45px;
+    }
+    .main_nav>.left_ul {
+        float: left;
+        overflow: hidden;
+    }
+    .main_nav>.right_ul {
+        float: right;
+        overflow: hidden;
+    }
+
+    .main_nav>ul>li {
+        color: white;
+        width: 85px;
+        float: left;
+    }
+    /* header end */
+    
+    .Wrapper{
+        width: 1050px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .Wrapper>.WritingWrap{
+        width: 815px;
+    }
+    .Wrapper>.WritingWrap>.contents{
+        border: 1px solid #CCC;
+        padding: 0 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    /* board_header */
+    .board_header{
+        margin-top: 15px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        border-bottom: 1px solid #CCC;
+    }
+    .board_header>h3>a{
+        float: left;
+        margin-right: 10px;
+    }
+    .board_header>.categori {
+        float: left;
+        border-left: 1px solid #AAA;
+        border-right: 1px solid #AAA;
+        padding: 0 10px;
+    }
+
+    .board_header>.categori-right {
+        float: right;
+        border-left: 1px solid #AAA;
+        padding: 0 10px;
+    }
+    .board_header>.categori-write {
+        float: right;
+        border-left: 1px solid #AAA;
+        padding-left: 10px;
+    }
+    /* board_header end */
+
+    /* contents-header start */
+    .contents-header{
+        border-bottom: 1px solid #CCC;
+    }
+    .contents-header>.header1, .contents-header>.header2{
+        margin: 10px 0;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    .contents-header>.header1>.title{
+        float: left;
+    }
+    .contents-header>.header1>.time, .contents-header>.header1>a{
+        float: right;
+    }
+    .contents-header>.header1 img{
+        width: 18px;
+        margin-right: 5px;
+    }
+    .contents-header>.header2 img{
+        vertical-align:middle;
+    }
+    .contents-header>.header2>a{
+        float: left;
+    }
+    .contents-header>.header2>.nick-box{
+        float: left;
+    }
+    .contents-header-info>span{
+        float: right;
+        margin-right: 10px;
+    }
+    .contents-header-info>.commentsCnt{
+        margin: 0;
+    }
+    /* contents-header end */
+    
+    /* comments-text start */
+    .comments-text{
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    /* comments-text end */
+    
+    /* contents-etc start */
+    .contents-etc{
+        overflow: hidden;
+        text-align:center;
+        margin-bottom: 10px;
+    }
+    .contents-etc>.updown{
+        margin-bottom: 30px;
+    }
+    .contents-etc>.updown>div:hover{
+        cursor: pointer;
+    }
+    .contents-etc>.updown>.up{
+        display: inline-block;
+        width: 100px;
+        border: 3px solid #4a90e2;
+        padding: 10px 17px 5px;
+        margin-right: 20px;
+    }
+    .contents-etc>.updown>.up img, .contents-etc>.updown>.down img{
+        width:30px;
+        margin-right: 10px;
+    }
+    .contents-etc>.updown>.up>strong{
+        color: #4a90e2;
+        vertical-align: 50%;
+    }
+    .contents-etc>.updown>.down{
+        display: inline-block;
+        width: 100px;
+        border: 3px solid #fa314a;
+        padding: 10px 17px 5px;
+    }
+    .contents-etc>.updown>.down>strong{
+        color: #fa314a;
+        vertical-align: 50%;
+    }
+    /* contents-etc end */
+
+    /* contents-crud start */
+    .contents-crud{
+        overflow: hidden;
+        border-bottom: 1px solid #CCC;
+        margin-bottom: 10px;
+    }
+    .contents-crud>a{
+        border-radius: 5px; 
+        padding: 4px 14px;
+        font-size: 12px;
+        margin: 0 10px 10px 0;
+    }
+    .contents-crud>.contents-c{
+        background-color: rgb(166, 212, 255, 0.5);
+        color: rgb(4, 65, 163);
+    }
+    .contents-crud>.contents-u{
+        background-color: rgb(160, 247, 163, 0.5);
+        color: rgb(39, 180, 46);
+    }
+    .contents-crud>.contents-d{
+        background-color: rgb(253, 176, 176, 0.5);
+        color: rgb(253, 60, 60);
+    }
+    .contents-crud>.contents-r{
+        float: right;
+        background: #cfcfcf;
+        margin-right: 0px;
+    }
+    /* contents-crud end */
+
+    /* comments-text start */
+    .contents-text{
+        text-align: center; 
+        padding: 30px 0 50px 0;
+    }
+    .contents-text>img{
+        max-width: 100%;
+    }
+    .icons-wrap>a>img{
+        width:25px; 
+        height:25px; 
+        float: right;
+        margin: 0 10px 10px 0;
+    }
+    /* comments-text end */
+
+    /* comments-best start */
+    .id{
+        overflow: hidden;
+        margin-top: 5px;
+        border-bottom: 1px solid #AAA;
+        font-size: 12px;
+    }
+
+    /* 베스트 댓글 */
+    .comments-best{
+        border:5px solid rgb(243, 123, 123);
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    .comments-best>.commemts-best-title{
+        background:#ffdddd;
+        color:red;
+        padding: 9px 0;
+    }
+    .comments-best>.commemts-best-title>span{
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    
+    /* 댓글 공통 */
+    .comments-profile{
+        float: left; 
+        margin-right:3px; 
+        width: 60px; 
+        height: 60px;
+    }
+    .comments-profile>img{
+        margin-right:3px; 
+        width: 60px; height:60px;
+    }
+    .comments-info{
+        margin: 5px 0 10px 0;
+    }
+    .comments-info img{
+        vertical-align: middle;
+        width:25px; 
+        height:25px; 
+        float: right;
+        margin-right: 10px;
+    }
+    .comments-info .rank{
+        float: left;
+        vertical-align: middle;
+        margin-right: 3px;
+        width: 18px;
+        height: 18px;
+    }
+
+    /* recomments start */
+    .recomments{
+        overflow: hidden;
+        background-color: rgb(198, 224, 248);
+        border: 5px solid rgb(125, 106, 235);
+        border-radius: 8px;
+        padding: 8px 15px;
+    }
+
+    .remove-comments{
+        float: right;
+    }
+    .recomments>.recomments-text{
+        margin-top: 13px;
+    }
+    .recomments>.recomments-text>.write-comments{
+        border-radius: 5px;
+        border: 1px solid #CCC; 
+        resize: none; 
+        float: left;
+        width: 85%;  
+        padding: 4px;
+    }
+    .recomments>.recomments-text>input{
+        float: right; 
+        width: 60px; 
+        height: 50px; 
+        color: rgb(198, 224, 248); 
+        background-color: rgb(166, 212, 255); 
+        border-radius: 5px; 
+        color: rgb(4, 65, 163);
+    }
+    /* recomments end */
+
+    /* re-reconmments start */
+    .re-recomments{
+        overflow: hidden;
+    }
+    .re-recomments>img{
+        float: left;
+        margin-left: 4%;
+    }
+    .re-recomments-profile>img{
+        float: left; 
+        width: 60px; 
+        height:60px;
+    }
+    /* re-reconmments end */
+    
+    /* comments-write start */
+    .comments-write{
+        border: 5px solid rgb(125, 106, 235); 
+        border-radius: 8px;
+        box-shadow:0 1px 3px -1px rgb(0 0 0 / 10%);
+        overflow: hidden; 
+        padding: 8px 15px; 
+        margin-bottom: 15px; 
+        background-color: rgb(198, 224, 248);
+    }
+    .comments-write>label{
+        padding-left:5px;
+    }
+    .comments-write>div{
+        margin-top: 13px;
+    }
+    .comments-write>div>.write-comments{
+        border-radius: 5px;
+        border: 1px solid #CCC;
+        resize: none; 
+        float: left; 
+        width: 90%;  
+        padding: 4px;
+    }
+    .comments-write>div>input{
+        float: right; 
+        width: 60px; 
+        height: 50px;  
+        background-color: rgb(166, 212, 255); 
+        border-radius: 5px; 
+        color: rgb(4, 65, 163);
+    }
+    /* comments-best end */
+    
+    /* comments-paging start */
+    .comments-paging{
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+    /* comments-paging end */
+
+    .display-none{
+        display: none;
+    }
+    .remove-comments:hover, .add-recomments:hover{
+        cursor: pointer;
+    }
+
+    .nick-box {
+        overflow-y: auto;
+        position: absolute;
+        margin-left: 60px;
+        z-index: 1;
+        padding: 10px 0;
+        border: 1px solid rgba(0,0,0,.06);
+        border-radius: 6px;
+        background-color: #fff;
+        color: #000;
+    }
+    .nick-box li{
+        padding: 5px 0;
+        font-size: 14px;
+    }
+    .nick-box li:hover{
+        cursor: pointer;
+        background-color: #EEE;
+    }
+    .imgSelect{
+        cursor: pointer;
+    }
+    
+    /* btn-like */
+    .btn-like, .btn-dislike {
+        float: right;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        color: transparent;
+        text-shadow: 0 0 2px rgba(255,255,255,.7), 0 0 0 #000;
+    }
+    .btn-like:hover, .btn-dislike:hover {
+        text-shadow: 0 0 0 #ea0;
+    }
+    .btn-like.done, .btn-dislike.done {
+        color: inherit;
+        text-shadow: 0;
+    }
+    .btn-like.done:hover, .btn-dislike.done:hover {
+        color: transparent;
+        text-shadow: 0 0 0 #777;
+    }
+    /* btn-like */
+
+    /* control-bar start */
+    .control-bar{ 
+        position: fixed; 
+        bottom: 18%; right: 32%;
+        border: 1px solid #AAA; 
+        border-radius: 5px;
+        text-align: center;  
+        padding: 5px;
+    }
+    .control-bar>a:hover{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    /* control-bar end */
+
+</style>
+
+<script>
+    
+    $(document).ready(function(){
+        
+        // 댓글 하나만 입력하도록 설정
+        $('.add-recomments').click(function(){
+            var add_recomments = $(this).attr('data-recomments');
+            console.log(add_recomments);
+            $('.recomments').addClass('display-none');
+            $('.'+add_recomments).removeClass('display-none');
+        })
+        $('.write').click(function(){
+            $('.recomments').addClass('display-none');
+        })
+        $('.remove-comments').click(function(){
+            $('.recomments').addClass('display-none');
+        })
+
+        // 회원 정보
+        $('.imgSelect').click(function(){
+            var data_id = $(this).attr('data-id');
+            console.log(data_id);
+            $('.nick-box').addClass('display-none');
+            $('.'+data_id).removeClass('display-none');
+        })
+        // url 복사 기능
+        $('.copy-url').click(function(){
+            copyLink();
+        })
+
+        // 외부영역 클릭 시 팝업 닫기
+        $(document).mouseup(function (e){
+        var LayerPopup = $(".nick-box");
+            if(LayerPopup.has(e.target).length === 0){
+                LayerPopup.addClass("display-none");
+            }
+        });
+
+        // 댓글 좋아요 싫어요 중 하나만 눌리도록 설정
+        $('.btn-like').click(function(){
+            $(this).toggleClass("done");
+            $(this).next().removeClass("done");
+        });
+        $('.btn-dislike').click(function(){
+            $(this).toggleClass("done");
+            $(this).prev().removeClass("done");
+        });
+    });
+
+    // 게시글 좋아요 싫어요 누르면 숫자 증가 시키기
+    function count(type){
+            const upresult = document.getElementById('upresult');
+            const downresult = document.getElementById('downresult');
+            
+            // 더하기
+            if(type === 'up') {
+                number = parseInt(upresult.innerText) + 1;
+                upresult.innerText = number;
+            }else if(type === 'down')  {
+                number = parseInt(downresult.innerText) + 1;
+                downresult.innerText = number;
+            }
+        }
+        
+
+    //  url 복사 기능
+    function copyLink(){
+
+        let currentUrl = window.document.location.href;
+
+        let t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = currentUrl;
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+
+        alert('주소를 복사하였습니다.');
+    }
+
+</script>
+
+<body>
+    <header id="top">
+        <div class="MultiBar">
+            <ul class="area_gnb">
+                <li>시작페이지로</li>
+                <li>다크모드</li>
+                <li>마이페이지</li>
+                <li>로그인</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <img src="../cob/images/cob_white.png" class="logo">
+        </div>
+        <div class="main_naviwrap">
+            <div class="main_nav">
+                <ul class="left_ul">
+                    <li>회사소개</li>
+                    <li>회사소개</li>
+                    <li>회사소개</li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="main_naviwrap">
+            <div class="main_nav">
+                <ul class="right_ul">
+                    <li>모임</li>
+                    <li>게시판</li>
+                    <li>카페</li>
+                    <li>게임</li>    
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="Wrapper">
+        <div class="WritingWrap">
+            <div class="contents">
+                <div class="board_header">
+                    <h3><a href="board.html">COB 게시판</a></h3>
+                    <a href="board.html" class="categori">잡담</a>
+                    <a href="textedit.html" class="categori-write">글쓰기</a>
+                    <a href="#" class="categori-right">다음글</a>
+                    <a href="#" class="categori-right">이전글</a>
+                    <a href="board.html" class="categori-right">목록</a>
+                </div>
+                <div class="contents-wrap">
+                    <div class="contents-header">
+                        <div class="header1">
+                            <span class="title">안녕하세요 새롭게 가입했습니다. 반가워요!!!!</span>
+                            <span class="time">2021.08.16 13:11</span>
+                            <a herf="#" class="copy-url">
+                                <img src="https://img.icons8.com/pastel-glyph/64/000000/copy--v1.png" alt="링크 주소복사 아이콘" title="주소복사">
+                            </a>
+                        </div>
+                        <div class="header2">
+                            <a href="#" class="imgSelect" data-id="id1"><img src="https://img.icons8.com/material-outlined/24/000000/black-jaguar.png"/>park</a>
+                            <div class="nick-box id1 display-none">
+                                <ul>
+                                    <li>작성글보기</li>
+                                    <li>회원정보보기</li>
+                                </ul>
+                            </div>
+                            <div class="contents-header-info">
+                                <span class="commentsCnt">조회수 : 20</span>
+                                <span>좋아요 : 11</span>
+                                <span>댓글 : 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-text">
+                        <p>게임 1</p><br><br>
+                        <img src="images/game1.jpg"><br><br>
+                        <p>게임 2</p><br><br>
+                        <img src="images/game2.jpg"><br><br>
+                        <p>게임 3</p><br><br>
+                        <img src="images/game3.jpg"><br><br>
+                        <p>게임 4</p><br><br>
+                        <img src="images/game4.jpg"><br><br>
+                        <p>게임 같이 할 사람 구해요!!</p>
+                    </div>
+                    <div class="contents-etc">
+                        <div class="updown">
+                            <div class="up" onclick='count("up")'>
+                                <a><img src="https://img.icons8.com/material-rounded/24/4a90e2/facebook-like--v1.png"/></a>
+                                <strong id="upresult" >2000</strong>
+                            </div>
+                            <div class="down" onclick='count("down")'>
+                                <a><img src="https://img.icons8.com/material-rounded/24/fa314a/thumbs-down.png"/></a>
+                                <strong id="downresult">161</strong>
+                            </div>
+                        </div>
+                        <div class="icons-wrap">
+                            <a><img alert src="https://img.icons8.com/ios/50/000000/siren.png"/></a>
+                            <a><img src="https://img.icons8.com/wired/64/000000/paste.png"/></a>
+                            <a><img src="https://img.icons8.com/material-outlined/24/000000/share.png"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contents-crud">
+                <a href="textedit.html" class="contents-c">글쓰기</a>
+                <a href="#" class="contents-u" >수정</a>
+                <a href="#" class="contents-d" onclick="return confirm('해당게시글을 삭제하시겠습니까?');">삭제</a>
+                <a href="board.html" class="contents-r">목록</a>
+            </div>
+            <div class="comments-wrap" id="comments">
+                <div class="comments-best">
+                    <div class="commemts-best-title">
+                        <span>베스트 댓글</span>
+                    </div>
+                    <div>			
+                        <div class="comments-profile">
+                            <img src="https://img.icons8.com/ios/50/000000/nerd--v1.png" >
+                        </div>
+                        <div class="comments-info">
+                            <a><img class="rank imgSelect" data-id="id2" src="https://img.icons8.com/ios/50/fa314a/diamond.png">park
+                                <div class="nick-box id2 display-none">
+                                    <ul>
+                                        <li>작성글보기</li>
+                                        <li>회원정보보기</li>
+                                    </ul>
+                                </div> 
+                            </a>
+                            <span class="date">2021.06.30 12:20</span>
+                            <a class="add-recomments" data-recomments="comments1">답글쓰기</a>	
+                            <a><img src="https://img.icons8.com/ios/50/000000/siren.png"/></a>
+                            <button class="btn-like">👎</button>
+                            <button class="btn-dislike">👍</button>
+                            <div class="comments-text">
+                                유익한 정보 감사합니다.<br>댓글 남기고 가여~~
+                            </div>
+                            <div class="recomments comments1 display-none">
+                                <label class="write">댓글 쓰기</label> 
+                                <a class="remove-comments">닫기</a>
+                                <div class="recomments-text">
+                                    <textarea class="write-comments" cols="50" rows="4" placeholder="댓글을 입력해주세요."></textarea>
+                                    <input type="submit" onclick="submitcomments()" value="등록">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments">
+                    <ul>
+                        <li>
+                            <div class="id">
+                                <div class="comments-profile">
+                                    <img src="https://img.icons8.com/ios/50/000000/cat-profile.png" >
+                                </div>
+                                <div class="comments-info">
+                                    <a><img class="rank imgSelect" data-id="id3" src="https://img.icons8.com/ios/50/fa314a/diamond.png" >senei
+                                        <div class="nick-box id3 display-none">
+                                            <ul>
+                                                <li>작성글보기</li>
+                                                <li>회원정보보기</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                    <span class="date">2021.06.30 19:18</span>
+                                    <a class="add-recomments" data-recomments="comments2" class="date">답글쓰기</a>	
+                                    <a><img src="https://img.icons8.com/ios/50/000000/siren.png"/></a>
+                                    <button class="btn-like">👎</button>
+                                    <button class="btn-dislike">👍</button>
+                                    <div class="comments-text">
+                                        1111111111111<br>zzz
+                                    </div>
+                                    <div class="recomments comments2 display-none">
+                                        <label class="write">댓글 쓰기</label> 
+                                        <a class="remove-comments">닫기</a>
+                                        <div class="recomments-text">
+                                            <textarea class="write-comments" cols="50" rows="4" placeholder="댓글을 입력해주세요."></textarea>
+                                            <input type="submit" onclick="submitcomments()" value="등록">
+                                        </div>
+                                    </div>
+                                </div>		
+                            </div>	
+                        </li>
+                        <li>
+                            <div class="id">			
+                                <div class="comments-profile">
+                                    <img src="https://img.icons8.com/ios/50/000000/cat-profile.png">
+                                </div>
+                                <div class="comments-info">
+                                    <a><img class="rank imgSelect" data-id="id4" src="https://img.icons8.com/ios/50/fa314a/diamond.png" >king
+                                        <div class="nick-box id4 display-none">
+                                            <ul>
+                                                <li>작성글보기</li>
+                                                <li>회원정보보기</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                    <span class="date">2021.06.30 11:16</span>
+                                    <a class="add-recomments" data-recomments="comments3" class="date">답글쓰기</a>	
+                                    <a><img src="https://img.icons8.com/ios/50/000000/siren.png"/></a>
+                                    <button class="btn-like">👎</button>
+                                    <button class="btn-dislike">👍</button>
+                                    <div class="comments-text">
+                                        222222222222222222<br>댓글 남기고 가여~~
+                                    </div>
+                                    <div class="recomments comments3 display-none">
+                                        <label class="write">댓글 쓰기</label> 
+                                        <a class="remove-comments">닫기</a>
+                                        <div class="recomments-text">
+                                            <textarea class="write-comments" cols="50" rows="4" placeholder="댓글을 입력해주세요."></textarea>
+                                            <input type="submit" onclick="submitcomments()" value="등록">
+                                        </div>
+                                    </div>
+                                    <div class="re-recomments">
+                                        <img src="https://img.icons8.com/ios/50/000000/right3.png"/>
+                                        <div class="id">			
+                                            <div class="re-recomments-profile">
+                                                <img src="https://img.icons8.com/ios/50/000000/user-female-circle.png">
+                                            </div>
+                                            <div class="re-recomments-info">
+                                                <a href="#"><img class="rank" src="https://img.icons8.com/ios/50/fa314a/diamond.png" >son</a>
+                                                <span class="date">2021.06.30 10:56</span>
+                                                <a><img src="https://img.icons8.com/ios/50/000000/siren.png"/></a>
+                                                <button class="btn-like">👎</button>
+                                                <button class="btn-dislike">👍</button>
+                                                <div class="comments-text">
+                                                    ㄱㅅㄱㅅㄱㅅㄱㅅ<br>ㄱㅅㄱㅅㄱㅅㄱㅅ
+                                                </div>
+                                            </div>		
+                                        </div>	
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="comments-write">
+                    <label>댓글 쓰기</label>
+                    <div>
+                        <textarea class="write-comments" cols="50" rows="4" placeholder="댓글을 입력해주세요."></textarea>
+                        <input type="submit" onclick="submitcomments()" value="등록">
+                    </div>
+                </div>
+                <div class="comments-paging">
+                    <a href="#"><span>첫 페이지</span></a>			
+                    <a href="#">1</a>			
+                    <a href="#">2</a>
+                    <a href="#">3</a>	
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>					
+                    <a href="#"><span>끝 페이지</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="control-bar">
+            <a href="#top">⬆</a><br>
+            <a href="#comments">💬</a><br>
+            <a href="#bottom">⬇</a>
+        </div>
+    </div>
+</body>
+</html>
